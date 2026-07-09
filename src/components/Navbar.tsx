@@ -22,7 +22,7 @@ export default function Navbar() {
           transition-all duration-700 ease-[0.16,1,0.3,1]
           ${isScrolled 
             ? 'w-full md:w-[600px] lg:w-[400px] py-3 px-6 md:px-8 bg-neutral-900/40 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl' 
-            : 'w-full py-8 px-6 md:px-12 mix-blend-difference'
+            : 'w-full py-8 px-6 md:px-12 mix-blend-difference border border-transparent'
           }
         `}
       >
