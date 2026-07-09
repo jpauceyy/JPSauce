@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           
           {/* Left Column (Info & Contact) */}
-          <div className="md:col-span-5 space-y-10">
+          <div className="md:col-span-8 space-y-10">
             <div className="space-y-4">
               <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-400 uppercase block font-semibold">
                 JPSauce Creative Co.
@@ -92,16 +92,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Center Column (Interactive Circular Badge) */}
-          <div className="md:col-span-3 flex justify-center items-center py-12 md:py-0 h-full self-center">
-            <button
-              onClick={handleScrollToTop}
-              className="w-24 h-24 rounded-full border border-neutral-800 hover:border-white hover:bg-white hover:text-black transition-all duration-500 font-mono text-[10px] uppercase tracking-[0.35em] flex items-center justify-center cursor-pointer shadow-2xl hover:scale-105"
-            >
-              EXPLORE
-            </button>
           </div>
 
           {/* Right Column (Rotating Mockups) */}
