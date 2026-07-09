@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import ProjectDetail from './pages/ProjectDetail';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
 import Lenis from 'lenis';
@@ -71,7 +72,9 @@ function LenisSetup() {
 
 function ConditionalFooter() {
   const { pathname } = useLocation();
-  if (pathname === '/work') return null;
+  const isWorkDetail = pathname.startsWith('/work/');
+  const isStandardRoute = ['/', '/work', '/contact'].includes(pathname) || isWorkDetail;
+  if (!isStandardRoute || pathname === '/work') return null;
   return <Footer />;
 }
 
@@ -94,6 +97,7 @@ export default function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/work/:id" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ConditionalFooter />
       </div>
