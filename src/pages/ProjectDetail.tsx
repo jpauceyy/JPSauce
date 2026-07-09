@@ -280,9 +280,22 @@ export default function ProjectDetail() {
 
   // Auto Scroll to Top on Project Switch
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    const scrollToTop = () => {
+      if ((window as any).lenis) {
+        (window as any).lenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+    };
+
+    scrollToTop();
+    // Double check with a short delay to account for dynamic content rendering
+    const timer = setTimeout(scrollToTop, 50);
+
     setIsVideoPlaying(true);
     setIsVideoMuted(true);
+
+    return () => clearTimeout(timer);
   }, [cleanId]);
 
   // Handle Video Play Toggle

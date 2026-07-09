@@ -29,15 +29,27 @@ function LenisSetup() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Prevent browser auto-scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     // Scroll window to top immediately before initializing Lenis
     window.scrollTo(0, 0);
 
     const lenis = new Lenis({
       infinite: pathname === '/work'
     });
+    (window as any).lenis = lenis;
 
     // Reset Lenis internal scroll state to top immediately
     lenis.scrollTo(0, { immediate: true });
+
+    // Double check scroll position after a short tick to handle rendering delay
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+      lenis.scrollTo(0, { immediate: true });
+    }, 50);
 
     function raf(time: number) {
       lenis.raf(time);
@@ -47,6 +59,8 @@ function LenisSetup() {
     const rafId = requestAnimationFrame(raf);
 
     return () => {
+      clearTimeout(timer);
+      (window as any).lenis = undefined;
       lenis.destroy();
       cancelAnimationFrame(rafId);
     };
