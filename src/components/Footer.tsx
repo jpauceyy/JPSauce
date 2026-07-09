@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -10,6 +10,14 @@ const mockups = [
 
 export default function Footer() {
   const [currentMockupIndex, setCurrentMockupIndex] = useState(0);
+  const footerRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: footerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-80, 80]);
 
   // Slideshow interval for mockups
   useEffect(() => {
@@ -28,7 +36,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="bg-[#030303] text-white w-full border-t border-neutral-900/60 overflow-hidden">
+    <footer ref={footerRef} id="contact" className="bg-[#030303] text-white w-full border-t border-neutral-900/60 overflow-hidden">
       {/* TOP SECTION (CONTENT) */}
       <div className="px-6 md:px-12 pt-20 pb-16">
         {/* Metadata Header Row */}
@@ -121,18 +129,19 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM SECTION (GIANT EMBOSSED METALLIC BANNER) */}
-      <div className="relative w-full overflow-hidden border-t border-neutral-900/60">
+      <div className="relative w-full h-[300px] md:h-[45vh] overflow-hidden border-t border-neutral-900/60">
         {/* Floating Copyright info overlay on top-left of the banner */}
-        <div className="absolute top-8 left-6 md:top-12 md:left-12 z-10 font-mono text-[10px] tracking-[0.25em] leading-relaxed text-neutral-500 select-none">
+        <div className="absolute top-8 left-6 md:top-12 md:left-12 z-20 font-mono text-[10px] tracking-[0.25em] leading-relaxed text-neutral-500 select-none">
           <span className="block font-medium text-white/70">JPSauce Creative Co., Ltd.</span>
           <span>© 2026 JPSAUCE STUDIO. ALL RIGHTS RESERVED.</span>
         </div>
 
-        {/* Banner image */}
-        <img 
+        {/* Banner image with Parallax effect */}
+        <motion.img 
+          style={{ y }}
           src="/jpsauce-metallic-banner.png" 
           alt="JPSauce Banner" 
-          className="w-full h-auto min-h-[300px] md:min-h-0 md:h-[45vh] object-cover origin-center select-none"
+          className="absolute left-0 right-0 w-full h-[calc(100%+160px)] top-[-80px] object-cover origin-center select-none"
         />
       </div>
     </footer>
