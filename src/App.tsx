@@ -1,0 +1,82 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'motion/react';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Work from './pages/Work';
+import ProjectDetail from './pages/ProjectDetail';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
+import SplashScreen from './components/SplashScreen';
+import Lenis from 'lenis';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function LenisSetup() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      infinite: pathname === '/work'
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    const rafId = requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+      cancelAnimationFrame(rafId);
+    };
+  }, [pathname]);
+
+  return null;
+}
+
+function ConditionalFooter() {
+  const { pathname } = useLocation();
+  if (pathname === '/work') return null;
+  return <Footer />;
+}
+
+export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <LenisSetup />
+      
+      <AnimatePresence mode="wait">
+        {showSplash && <SplashScreen key="splash" onComplete={() => setShowSplash(false)} />}
+      </AnimatePresence>
+
+      <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/work/:id" element={<ProjectDetail />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <ConditionalFooter />
+      </div>
+    </Router>
+  );
+}

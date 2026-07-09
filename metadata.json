@@ -1,0 +1,8 @@
+{
+  "name": "Remix: High-End Portfolio",
+  "description": "A high-end, high-contrast, interactive portfolio website fusing editorial layouts, technical finish, and bold typographic hierarchy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
