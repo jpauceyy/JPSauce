@@ -29,9 +29,15 @@ function LenisSetup() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Scroll window to top immediately before initializing Lenis
+    window.scrollTo(0, 0);
+
     const lenis = new Lenis({
       infinite: pathname === '/work'
     });
+
+    // Reset Lenis internal scroll state to top immediately
+    lenis.scrollTo(0, { immediate: true });
 
     function raf(time: number) {
       lenis.raf(time);

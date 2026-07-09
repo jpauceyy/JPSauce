@@ -1,19 +1,19 @@
 import { useEffect, useState, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
-import { 
-  ArrowRight, 
-  ArrowLeft, 
-  Play, 
-  Pause, 
-  Volume2, 
-  VolumeX, 
-  Maximize2, 
-  X, 
-  Calendar, 
-  Briefcase, 
-  Tag, 
-  User 
+import {
+  ArrowRight,
+  ArrowLeft,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  Maximize2,
+  X,
+  Calendar,
+  Briefcase,
+  Tag,
+  User
 } from 'lucide-react';
 
 // Highly-polished detailed project dataset matching the 5 main projects in the portfolio
@@ -54,17 +54,17 @@ const projectsDatabase: Record<string, Project> = {
     id: 'ixo',
     numId: '01',
     title: 'IXO ESPORTS',
-    subtitle: 'MODULAR IDENTITY SYSTEM FOR THE DIGITAL BROADCAST FRONTIER',
-    description: 'A relentless branding overhaul fusing raw mechanical geometry, digital-first modularity, and custom esports apparel design.',
+    subtitle: 'A DYNAMIC DESIGN SYSTEM BUILT FOR PEAK ESPORTS PERFORMANCE',
+    description: 'Engineering a vibrant, high-energy visual identity—from custom pro team jerseys to lifestyle apparel and tournament broadcast graphics—for IXO Esports.',
     year: '2023',
     client: 'IXO eSports',
     role: 'Lead Identity Designer',
     tags: ['BRANDING', 'GRAPHIC DESIGN', 'APPAREL', 'STRATEGY'],
     heroImage: '/ixo-jersey.mp4',
     story: {
-      overview: 'IXO Esports required a visual identity engineered for high-stakes competition. From live Twitch broadcast overlays and digital team cards to custom esports jerseys and physical merchandise, the new brand identity needed to remain sharp and instantly recognizable at every scale. We moved past traditional mascot clichés, focusing on bold geometric structures and heavy industrial aesthetics.',
-      challenge: 'Esports visual design often relies on overly complex gradients and intricate illustrations that degrade when scaled down on mobile displays or embroidered on athletic wear. The challenge was to create an aggressive, memorable, and high-impact identity while maintaining flat, geometric, and modular design rules optimized for both physical manufacturing and digital UI/UX.',
-      execution: 'I engineered a bespoke, heavy-duty display sans-serif typeface paired with an adaptable chevron grid system. This design system was integrated across custom jersey schemes, official team merchandise, and a comprehensive graphic asset kit. Content teams can now instantly generate dynamic match-day graphics, social media updates, and tournament schedules while maintaining total brand consistency.'
+      overview: 'Competing in modern esports requires a visual presence that seamlessly scales across physical apparel and digital arenas. IXO Esports needed a striking, unified brand identity capable of making an immediate impact on stage, driving merchandise sales, and providing a clean graphic framework for fast-paced social media coverage.',
+      challenge: 'We developed an ultra-modern design language centered around a distinctive geometric monogram and dynamic magenta-to-violet gradients. Anchored by a custom topographic wave pattern, the identity spans custom performance jerseys, streetwear lifestyle apparel, stream overlays, and social matchday assets designed for instant recognition across all platforms.',
+      execution: 'For the pro jersey and merchandise line, we engineered contrasting home/away jersey concepts featuring custom contour linework and sharp branding placements. Complementary lifestyle tees bring the core IXO mark to everyday streetwear, delivering a premium merchandise collection for fans and players alike. Across digital touchpoints, we supplied IXO with a modular broadcast and graphics asset kit. From dynamic versus-screen templates to match result graphics, every component was built for maximum speed and readability during live tournament streams.'
     },
     gallery: [
       { url: '/IXO.jpg', type: 'image', caption: 'Esports logo design.', aspect: 'aspect-[16/10]' },
@@ -79,7 +79,7 @@ const projectsDatabase: Record<string, Project> = {
       role: "Director of Operations, IXO Gaming"
     },
     artDirectionTitle: 'Art Direction & Visual Identity',
-    artDirectionDesc: 'Forging a visual language built for elite competition. We established a high-performance design system bridging athletic apparel design with live-stream graphics, prioritizing bold geometric forms that command attention across every screen and stadium.',
+    artDirectionDesc: 'The visual direction blends high-tech graphic architecture with organic topographic linework. Vibrant neon gradients set against deep, textured dark backgrounds create an immersive aesthetic that bridges the gap between competitive gaming gear, digital broadcasts, and modern lifestyle fashion.',
     artDirectionSubDesc: 'High-performance branding requires extreme versatility across both digital and physical touchpoints. For IXO Esports, we paired a geometric primary crest with custom topographic grid lines across home and away apparel concepts. By contrasting deep charcoal bases with vibrant neon accents, the identity delivers maximum visual impact on esports apparel, online store merchandise, and live Twitch overlays.'
   },
   'lf': {
@@ -95,8 +95,8 @@ const projectsDatabase: Record<string, Project> = {
     heroImage: '/lf-desktop2.jpg',
     story: {
       overview: 'LF Athletic Performance required a sleek, conversion-focused web platform to scale their online gym coaching business. Operating in a crowded fitness market, the goal was to ditch generic templates and build a tailored digital experience that converts site visitors into dedicated coaching clients. We designed a high-contrast, dark-mode UI/UX that projects authority, strength, and premium value.',
-      challenge: 'Online fitness platforms often suffer from cluttered layouts, confusing onboarding flows, and overwhelming information. The challenge was to simplify the client acquisition funnel—clearly presenting the "How It Works" methodology (Apply $\rightarrow$ Consult $\rightarrow$ Custom Plan $\rightarrow$ Transform) while highlighting the personal authority and credentials of the head coach without friction.',
-      execution: 'We engineered a high-performance, responsive web application centered around clarity and speed. Key highlights include:.'
+      challenge: 'Online fitness platforms often suffer from cluttered layouts, confusing onboarding flows, and overwhelming information. The challenge was to simplify the client acquisition funnel—clearly presenting the "How It Works" methodology while highlighting the personal authority and credentials of the head coach without friction.',
+      execution: 'To capture the intense, high-performance nature of personal coaching, we engineered a sleek, dark-mode visual hierarchy anchored by bold crimson accents and aggressive typography. Custom interactive elements—including a dynamic macro/one-rep max calculator and structured package comparison cards—give prospective clients immediate, engaging tools to evaluate their fitness goals directly on the page. Strategic conversion design was baked into every scroll depth. From clear "How It Works" step-by-step roadmaps and social proof testimonials to an integrated, low-friction application form, the layout seamlessly guides visitors from initial motivation to submitting their coaching request. The responsive grid ensures crisp contrast and effortless navigation across all mobile and desktop devices.'
     },
     gallery: [
       { url: '/LF.jpg', type: 'image', caption: 'High-converting personal trainer website', aspect: 'aspect-[16/10]' },
@@ -181,65 +181,65 @@ const projectsDatabase: Record<string, Project> = {
   'grandfps': {
     id: 'grandfps',
     numId: '05',
-    title: 'GRANDFPS',
-    subtitle: 'Unlock Maximum FPS & Low-Latency Gaming Performance',
-    description: 'Experience zero-input delay, higher framerates, and buttery-smooth gameplay. Professional PC tuning trusted by top competitive esports players.',
+    title: 'GrandzieFPS',
+    subtitle: 'Custom Web Design & High-Impact Digital Branding for PC Optimization Experts',
+    description: 'Designing a sleek, conversion-focused web identity tailored for competitive gamers and PC performance junkies.',
     year: '2026',
     client: 'GrandFPS PC Optimiser',
     role: 'Lead Brand & Motion Designer',
     tags: ['Web Design, UI/UX, Motion Design, Brand System'],
     heroImage: '/granddesktop.jpg',
     story: {
-      overview: 'A high-impact social proof bar featuring verified 5-star client reviews from competitive gamers and streamers. Highlights real-world feedback on input lag reduction, ping stability, and framerate boosts.',
-      challenge: 'We dont just change a few Windows settings. We perform deep system-level optimizations, custom BIOS tuning, and debloating to ensure your hardware is running at its absolute peak potential.',
-      execution: 'We built a high-octane branding system utilizing razor-sharp geometric lines, a bold tactical green-and-charcoal color palette, and high-visibility monospaced typography. This identity was translated into a conversion-focused web portal, modular broadcast assets, animated transition stingers, full-scale digital stadium LED banners, and official tournament materials.'
+      overview: 'GrandzieFPS provides deep system-level tuning, BIOS optimization, and latency reduction for competitive gamers. However, their digital presence needed to match the precision of their technical services. The goal was to replace generic tech layouts with an aggressive, high-contrast digital experience that instills immediate trust, communicates technical expertise, and converts high-intent traffic into bookings.',
+      challenge: 'We engineered a bespoke web design built around a sleek, high-tech dark mode UI powered by neon green accenting. Every section—from real-time FPS benchmark comparisons to tier pricing cards—was strategically structured to guide visitors seamlessly toward booking an optimization package or joining the Discord community.',
+      execution: 'Structure and speed were prioritized across all viewports. We streamlined the tier selection architecture so users can quickly evaluate optimization packages—from fresh Windows setups to full system overhauls. Integrated Discord CTAs, responsive mobile layouts, and subtle micro-interactions ensure a frictionless conversion flow from first scroll to checkout.'
     },
     gallery: [
-      { url: '/iphone-grandzie.jpg', type: 'image', caption: 'The minimalist, sharp-edged GrandFPS brand mark and vector crest.', aspect: 'aspect-[16/10]' },
-      { url: '/grand-ipad.jpg', type: 'image', caption: 'Dynamic main stage digital backdrops at the grand finals live arena.', aspect: 'aspect-[16/9]' },
+      { url: '/iphone-grandzie.jpg', type: 'image', caption: 'FLUID MOBILE EXPERIENCE & RESPONSIVE LAYOUTS.', aspect: 'aspect-[16/10]' },
+      { url: '/grand-ipad.jpg', type: 'image', caption: 'DYNAMIC PRICING & INTERACTIVE TIER CARDS', aspect: 'aspect-[16/9]' },
       { url: '/grand-vid.mp4', type: 'video', caption: 'High-visibility team scoreboard and real-time live ticker layouts.', aspect: 'aspect-[16/9]' },
-      { url: '/grandfps2.jpg', type: 'image', caption: 'High-concept tournament championship graphics and broadcast interface details.', aspect: 'aspect-[1750/2480]' },
+      { url: '/grandfps2.jpg', type: 'image', caption: 'High-concept brochure graphics.', aspect: 'aspect-[1750/2480]' },
       { url: '/grand-phone.jpg', type: 'image', caption: 'Mobile-first companion application and real-time match statistics view.', aspect: 'aspect-[4/3]' }
     ],
     testimonial: {
-      quote: "The brand overhaul completely redefined our broadcast standard. We successfully bridged the physical arena and digital livestream, delivering a high-caliber esports spectacle that attracted massive sponsorship interest.",
-      author: "Marcus Vance",
-      role: "VP of Broadcast Production, GrandFPS"
+      quote: "The web design completely redefined our digital presence. It communicates pure performance from the moment a user lands on the site, turning casual site visitors into booked tuning clients and vibrant community members.",
+      author: "Grand",
+      role: "Founder, GrandzieFPS"
     },
     artDirectionTitle: 'Art Direction',
-    artDirectionDesc: 'Fusing tactical military structure with high-voltage modern esports energy. We designed a sharp, aggressive typography grid paired with glowing neon accents and telemetry line grids, making every second of the competitive play feel professional and intense.',
-    artDirectionSubDesc: 'Sleek dark themes, high-contrast neon accents, and clean technical monospaced details. Every broadcast asset was engineered to guarantee readability and performance across any streaming platform.'
+    artDirectionDesc: 'The visual direction leans into modern gaming tech aesthetics, utilizing grid textures, high-contrast typography, and glowing status indicators. By blending raw benchmark data with clean, dark-mode component architecture, the interface reflects the speed, stability, and zero-latency performance GrandzieFPS delivers to its clients.',
+    artDirectionSubDesc: 'High-contrast neon accents, deep dark mode UI, and sharp technical typography engineered for maximum readability. Every UI element—from mobile value propositions to tablet pricing matrices—was designed to deliver a smooth, frictionless user experience across all devices.'
   },
   'tuki': {
     id: 'tuki',
     numId: '06',
     title: 'Tuki eSports',
-    subtitle: 'CHAMPIONSHIP IDENTITY & ESPORTS PRESENCE',
-    description: 'A complete visual redesign and lifestyle apparel system for TUKI UK & Ireland, bridging physical merchandise with professional tournament graphics.',
+    subtitle: 'Championship Branding, Custom Apparel Design & Tournament Visual Assets',
+    description: 'Building an aggressive, high-impact visual ecosystem—from custom pro jerseys to matchday broadcast graphics—for Tuki eSports.',
     year: '2024',
     client: 'TUKI UK & Ireland',
     role: 'Lead Visual Designer & Brand Strategist',
     tags: ['BRANDING', 'GRAPHIC DESIGN', 'APPAREL'],
     heroImage: '/tukiwinners.jpg',
     story: {
-      overview: 'TUKI UK & Ireland demanded a cohesive, high-impact brand presence to represent their expanding competitive footprint in the region. We built a unified identity that bridges bold streetwear fashion with high-frequency digital broadcasts, providing the team with a professional look that stands out both on stage and on streams.',
-      challenge: 'Esports branding is often fragmented, with separate graphics packages, merchandise lines, and promotional assets that do not share a common thread. The challenge was to create a unified design language that translates seamlessly from physical technical apparel to real-time championship victory layouts.',
-      execution: 'We developed a clean, minimalist yet bold typographic hierarchy coupled with a customized apparel blueprint. This was implemented across 3D jersey design renders, physical wear campaigns, and an entire suite of game-day and roster graphics, instantly elevating their commercial presence and team prestige.'
+      overview: 'Competing at the highest level in the UK & Ireland esports scene requires more than just in-game skill; it demands a distinct, instantly recognizable brand presence. Tuki eSports needed a cohesive visual identity that could command attention across physical merch drops, streaming platforms, and social media channels during high-stakes tournament play.',
+      challenge: 'We developed a full-suite visual identity anchored by custom pro team apparel, dynamic matchday graphics, and bold roster announcement templates. Utilizing an aggressive red-and-black marble color scheme, high-energy typography, and sleek 3D logo accents, the design system bridges the gap between competitive team apparel and elite digital broadcasting.',
+      execution: 'For the official team jersey design, we engineered a custom marble-texture graphic featuring bold contrast piping, clean logo placement, and sharp player back-nametags. The apparel layout delivers a sleek, athletic silhouette tailored for both stage play and official fan merch stores. On the broadcast side, we created modular social media and stream asset packs—including Gameday match banners, group standing announcements, and win-state overlays. Each template was engineered for rapid editing, allowing the organization to roll out real-time tournament updates during live events without compromising visual quality.'
     },
     gallery: [
-      { url: '/gameday.jpg', type: 'image', caption: 'High-impact social media Match Day and lineup graphics.', aspect: 'aspect-[16/9]' },
-      { url: '/jersey-ad.jpg', type: 'image', caption: 'Championship jersey campaign editorial photoshoot and lifestyle presentation.', aspect: 'aspect-[1440/1800]' },
+      { url: '/gameday.jpg', type: 'image', caption: 'HIGH-IMPACT SOCIAL MEDIA MATCH DAY AND LINEUP GRAPHICS.', aspect: 'aspect-[16/9]' },
+      { url: '/jersey-ad.jpg', type: 'image', caption: 'CHAMPIONSHIP JERSEY CAMPAIGN EDITORIAL PHOTOSHOOT AND LIFESTYLE PRESENTATION.', aspect: 'aspect-[1440/1800]' },
       { url: '/tuki-video.mp4', type: 'video', caption: 'Dynamic motion graphic sequence and cinematic tournament highlights loop.', aspect: 'aspect-[16/9]' },
-      { url: '/Winners-of-div7.jpg', type: 'image', caption: 'Division 7 Grand Finals championship roster announcement.', aspect: 'aspect-[2480/3508]' },
-      { url: '/winners.jpg', type: 'image', caption: 'Championship final celebration layouts and trophy showcase.', aspect: 'aspect-[2480/3508]' }
+      { url: '/Winners-of-div7.jpg', type: 'image', caption: 'Division 7 Grand Finals championship results announcement.', aspect: 'aspect-[2480/3508]' },
+      { url: '/winners.jpg', type: 'image', caption: 'Group Stage celebration showcase.', aspect: 'aspect-[2480/3508]' }
     ],
     testimonial: {
-      quote: "The unified visual redesign transformed TUKI from a competitive roster into a professional esports brand. The merchandise sold out instantly, and our visual identity is now recognized across the entire UK & Ireland championship.",
-      author: "Finlay MacLeod",
+      quote: "The unified visual redesign transformed Tuki eSports from a competitive roster into a professional esports brand. The merchandise sold out instantly, and our visual identity is now recognized across the entire UK & Ireland championship circuit.",
+      author: "Ace",
       role: "General Manager, TUKI Esports"
     },
     artDirectionTitle: 'Art Direction',
-    artDirectionDesc: 'Fusing clean Swiss-style layout hierarchy with modern competitive esports culture. We established a bold, clinical layout standard that elevates high-performance team graphics into premium lifestyle apparel statements.',
+    artDirectionDesc: 'The art direction combines raw, urban tactical textures with ultra-modern sports graphics. High-contrast typography, stylized topographic pattern work, and vibrant red accents create an intense, competitive aesthetic that highlights roster victories, game-day match-ups, and merchandise drops across every digital touchpoint.',
     artDirectionSubDesc: 'Polished monochromatic bases, high-contrast display typography, and structured grid frameworks. A highly disciplined visual system that treats gaming lifestyle apparel and digital victory graphics with the prestige of a luxury brand.'
   }
 };
@@ -247,7 +247,7 @@ const projectsDatabase: Record<string, Project> = {
 export default function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  
+
   // Resolve ID/slug to matching project (with backward compatibility)
   let cleanId = id ? id.toLowerCase() : 'ixo';
   if (cleanId === '01') cleanId = 'ixo';
@@ -256,13 +256,13 @@ export default function ProjectDetail() {
   else if (cleanId === '04' || cleanId === 'obn') cleanId = 'oblivion';
   else if (cleanId === '05' || cleanId === 'accl') cleanId = 'grandfps';
   else if (cleanId === '06' || cleanId === 'tuki') cleanId = 'tuki';
-  
+
   const project = projectsDatabase[cleanId] || projectsDatabase['ixo'];
   const isSymmetricalLayout = project.id === 'avng' || project.id === 'oblivion';
 
   // Lightbox State
   const [activeMedia, setActiveMedia] = useState<{ url: string; type: 'image' | 'video' } | null>(null);
-  
+
   // Custom Video Player State
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [isVideoMuted, setIsVideoMuted] = useState(true);
@@ -291,7 +291,7 @@ export default function ProjectDetail() {
       if (isVideoPlaying) {
         videoRef.current.pause();
       } else {
-        videoRef.current.play().catch(() => {});
+        videoRef.current.play().catch(() => { });
       }
       setIsVideoPlaying(!isVideoPlaying);
     }
@@ -326,8 +326,8 @@ export default function ProjectDetail() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       y: 0,
       transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
     }
@@ -335,7 +335,7 @@ export default function ProjectDetail() {
 
   const lineScale = {
     hidden: { scaleX: 0 },
-    show: { 
+    show: {
       scaleX: 1,
       transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
     }
@@ -343,11 +343,11 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-black text-white selection:bg-white selection:text-black pt-28 md:pt-36 overflow-hidden">
-      
+
       {/* Back button */}
       <div className="px-6 md:px-12 mb-10">
-        <Link 
-          to="/work" 
+        <Link
+          to="/work"
           className="group inline-flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-neutral-400 hover:text-white transition-colors duration-300"
         >
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1.5 duration-300" />
@@ -355,7 +355,7 @@ export default function ProjectDetail() {
         </Link>
       </div>
 
-      <motion.div 
+      <motion.div
         variants={staggerContainer}
         initial="hidden"
         animate="show"
@@ -363,21 +363,21 @@ export default function ProjectDetail() {
       >
         {/* TITLE BLOCK */}
         <div className="px-6 md:px-12 mb-16">
-          <motion.span 
+          <motion.span
             variants={fadeUp}
             className="font-mono text-xs md:text-sm tracking-[0.3em] text-neutral-400 mb-4 block uppercase font-medium"
           >
             CASE STUDY — {project.numId} / 05
           </motion.span>
-          
-          <motion.h1 
+
+          <motion.h1
             variants={fadeUp}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-medium tracking-tight mb-8 leading-[0.95]"
           >
             {project.title}
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             variants={fadeUp}
             className="text-lg md:text-xl lg:text-2xl font-sans text-neutral-300 max-w-4xl tracking-tight leading-relaxed mb-12 font-medium"
           >
@@ -386,8 +386,8 @@ export default function ProjectDetail() {
 
           {/* SPECIFICATIONS GRID */}
           <motion.div variants={lineScale} className="w-full h-[1px] bg-neutral-800 origin-left my-8" />
-          
-          <motion.div 
+
+          <motion.div
             variants={fadeUp}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 py-4"
           >
@@ -426,34 +426,34 @@ export default function ProjectDetail() {
 
         {/* HERO MEDIA */}
         <div ref={heroScrollRef} className="w-full px-0 md:px-6 mb-16 md:mb-24">
-          <motion.div 
+          <motion.div
             style={{ scale, ...(project.id === 'tuki' ? { aspectRatio: '1500/500' } : {}) }}
             className="relative w-full aspect-video md:aspect-[21/9] bg-neutral-950 overflow-hidden group shadow-2xl"
           >
             {project.heroImage.endsWith('.mp4') ? (
-              <motion.video 
+              <motion.video
                 style={{ scale: imageScale }}
-                src={project.heroImage} 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
+                src={project.heroImage}
+                autoPlay
+                loop
+                muted
+                playsInline
                 preload="auto"
-                className="w-full h-full object-cover origin-center" 
+                className="w-full h-full object-cover origin-center"
               />
             ) : (
-              <motion.img 
+              <motion.img
                 style={{ scale: imageScale }}
-                src={project.heroImage} 
-                alt={project.title} 
+                src={project.heroImage}
+                alt={project.title}
                 loading="eager"
                 fetchPriority="high"
                 decoding="sync"
-                className="w-full h-full object-cover origin-center" 
+                className="w-full h-full object-cover origin-center"
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            
+
             {/* Aspect tag and project name in bottom left */}
             <div className="absolute bottom-6 left-6 md:left-12 flex items-center gap-4 text-white font-mono text-[10px] tracking-widest uppercase bg-black/60 backdrop-blur-md px-4 py-2 border border-white/15">
               <span>{project.title} OVERVIEW</span>
@@ -469,7 +469,7 @@ export default function ProjectDetail() {
               THE DESIGN STRATEGY
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight leading-tight">
-             Stripping Away Complexity to Build High-Impact Esports Branding
+              Forging a Next-Gen Esports Brand & Apparel Ecosystem
             </h2>
             <div className="p-8 border-l-2 border-white bg-neutral-900/20 backdrop-blur-md space-y-4">
               <span className="font-mono text-[10px] tracking-widest text-neutral-400 uppercase block">CORE INSIGHT</span>
@@ -486,7 +486,7 @@ export default function ProjectDetail() {
                 {project.story.overview}
               </p>
             </div>
-            
+
             <div className="space-y-4">
               <h3 className="font-mono text-xs tracking-widest text-neutral-400 uppercase font-semibold">02 / THE CHALLENGE</h3>
               <p className="font-sans text-base md:text-lg text-neutral-300 leading-relaxed font-light">
@@ -515,32 +515,32 @@ export default function ProjectDetail() {
           </div>
 
           <div className="space-y-12 md:space-y-20">
-            
+
             {/* Gallery Layout Item 1: Symmetrical 2-col for avng/obn, asymmetric for others */}
             <div className={isSymmetricalLayout ? "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start" : "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start"}>
               <div className={isSymmetricalLayout ? "flex flex-col justify-between" : "md:col-span-7 flex flex-col justify-between"}>
-                <div 
+                <div
                   className={`gallery-grid-item group ${project.gallery[0].aspect || (isSymmetricalLayout ? (project.id === 'oblivion' ? 'aspect-[16/9]' : 'aspect-[4/3]') : 'aspect-[4/3]')}`}
                   style={project.gallery[0].aspect && project.gallery[0].aspect.includes('/') ? { aspectRatio: project.gallery[0].aspect.replace('aspect-[', '').replace(']', '') } : undefined}
                   onClick={() => setActiveMedia({ url: project.gallery[0].url, type: project.gallery[0].type || 'image' })}
                 >
                   {project.gallery[0].type === 'video' ? (
-                    <video 
-                      src={project.gallery[0].url} 
+                    <video
+                      src={project.gallery[0].url}
                       autoPlay
                       loop
                       muted
                       playsInline
                       preload="metadata"
-                      className="gallery-grid-media group-hover:scale-105" 
+                      className="gallery-grid-media group-hover:scale-105"
                     />
                   ) : (
-                    <img 
-                      src={project.gallery[0].url} 
-                      alt={project.gallery[0].caption} 
+                    <img
+                      src={project.gallery[0].url}
+                      alt={project.gallery[0].caption}
                       loading="lazy"
                       decoding="async"
-                      className="gallery-grid-media group-hover:scale-105" 
+                      className="gallery-grid-media group-hover:scale-105"
                     />
                   )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
@@ -555,28 +555,28 @@ export default function ProjectDetail() {
 
               <div className={isSymmetricalLayout ? "flex flex-col justify-between" : "md:col-span-5 flex flex-col justify-between"}>
                 <div>
-                  <div 
+                  <div
                     className={`gallery-grid-item group ${project.gallery[1].aspect || (isSymmetricalLayout ? (project.id === 'oblivion' ? 'aspect-[16/9]' : 'aspect-[4/3]') : 'aspect-square')}`}
                     style={project.gallery[1].aspect && project.gallery[1].aspect.includes('/') ? { aspectRatio: project.gallery[1].aspect.replace('aspect-[', '').replace(']', '') } : undefined}
                     onClick={() => setActiveMedia({ url: project.gallery[1].url, type: project.gallery[1].type || 'image' })}
                   >
                     {project.gallery[1].type === 'video' ? (
-                      <video 
-                        src={project.gallery[1].url} 
+                      <video
+                        src={project.gallery[1].url}
                         autoPlay
                         loop
                         muted
                         playsInline
                         preload="metadata"
-                        className="gallery-grid-media group-hover:scale-105" 
+                        className="gallery-grid-media group-hover:scale-105"
                       />
                     ) : (
-                      <img 
-                        src={project.gallery[1].url} 
-                        alt={project.gallery[1].caption} 
+                      <img
+                        src={project.gallery[1].url}
+                        alt={project.gallery[1].caption}
                         loading="lazy"
                         decoding="async"
-                        className="gallery-grid-media group-hover:scale-105" 
+                        className="gallery-grid-media group-hover:scale-105"
                       />
                     )}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
@@ -588,7 +588,7 @@ export default function ProjectDetail() {
                     <span>{project.gallery[1].caption}</span>
                   </div>
                 </div>
-                
+
                 {/* Under-image paragraph matching screenshot style */}
                 {project.artDirectionSubDesc && (
                   <div className="mt-8 font-mono text-xs md:text-sm text-neutral-400 leading-relaxed">
@@ -602,9 +602,9 @@ export default function ProjectDetail() {
             {project.gallery.some(item => item.type === 'video') ? (
               <div className="w-full border border-neutral-800 p-4 md:p-8 bg-neutral-950/40 rounded-sm">
                 <div className="relative aspect-video w-full overflow-hidden bg-black flex items-center justify-center">
-                  <video 
+                  <video
                     ref={videoRef}
-                    src={project.gallery.find(item => item.type === 'video')?.url} 
+                    src={project.gallery.find(item => item.type === 'video')?.url}
                     autoPlay
                     loop
                     muted={isVideoMuted}
@@ -612,7 +612,7 @@ export default function ProjectDetail() {
                     preload="metadata"
                     className="w-full h-full object-cover"
                   />
-                  
+
                   {/* Custom Player Controls */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 opacity-100 transition-opacity duration-300">
                     <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-black/70 border border-neutral-800 font-mono text-[10px] tracking-widest text-white uppercase rounded-full">
@@ -622,7 +622,7 @@ export default function ProjectDetail() {
 
                     <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
                       {/* Play / Pause */}
-                      <button 
+                      <button
                         onClick={togglePlay}
                         className="flex items-center gap-2.5 px-5 py-2.5 bg-white text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-neutral-200 transition-colors duration-300 rounded-full cursor-none pointer-events-auto"
                       >
@@ -638,7 +638,7 @@ export default function ProjectDetail() {
                       </button>
 
                       {/* Mute / Unmute */}
-                      <button 
+                      <button
                         onClick={toggleMute}
                         className="p-3 bg-black/60 border border-white/20 text-white rounded-full hover:bg-white hover:text-black transition-all duration-300 cursor-none pointer-events-auto"
                       >
@@ -656,16 +656,16 @@ export default function ProjectDetail() {
               /* Panoramic alternative image layout if project lacks a direct video stream */
               !isSymmetricalLayout ? (
                 <div className="w-full flex flex-col justify-between">
-                  <div 
+                  <div
                     className="gallery-grid-item group aspect-[21/9]"
                     onClick={() => setActiveMedia({ url: project.gallery[2]?.url || project.heroImage, type: 'image' })}
                   >
-                    <img 
-                      src={project.gallery[2]?.url || project.heroImage} 
-                      alt="Panoramic Showcase" 
+                    <img
+                      src={project.gallery[2]?.url || project.heroImage}
+                      alt="Panoramic Showcase"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover scale-[1.01] transition-transform duration-[4000ms] ease-out group-hover:scale-105" 
+                      className="w-full h-full object-cover scale-[1.01] transition-transform duration-[4000ms] ease-out group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                       <Maximize2 className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-75 group-hover:scale-100" />
@@ -683,28 +683,28 @@ export default function ProjectDetail() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               {project.gallery.slice(3).map((item, index) => (
                 <div key={item.url + index} className="flex flex-col">
-                  <div 
+                  <div
                     className={`gallery-grid-item group ${item.aspect || 'aspect-[4/3]'}`}
                     style={item.aspect && item.aspect.includes('/') ? { aspectRatio: item.aspect.replace('aspect-[', '').replace(']', '') } : undefined}
                     onClick={() => setActiveMedia({ url: item.url, type: item.type || 'image' })}
                   >
                     {item.type === 'video' ? (
-                      <video 
-                        src={item.url} 
+                      <video
+                        src={item.url}
                         autoPlay
                         loop
                         muted
                         playsInline
                         preload="metadata"
-                        className="gallery-grid-media group-hover:scale-105" 
+                        className="gallery-grid-media group-hover:scale-105"
                       />
                     ) : (
-                      <img 
-                        src={item.url} 
-                        alt={item.caption} 
+                      <img
+                        src={item.url}
+                        alt={item.caption}
                         loading="lazy"
                         decoding="async"
-                        className="gallery-grid-media group-hover:scale-105" 
+                        className="gallery-grid-media group-hover:scale-105"
                       />
                     )}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
@@ -728,11 +728,11 @@ export default function ProjectDetail() {
             <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase flex items-center gap-3">
               <span className="w-1.5 h-1.5 bg-white rounded-full"></span> CLIENT SATISFACTION VERDICT
             </span>
-            
+
             <div className="relative">
               {/* Giant quotation marks styled editorially */}
               <span className="absolute -top-16 -left-8 md:-left-16 text-white/5 text-[15rem] font-serif leading-none select-none pointer-events-none">&ldquo;</span>
-              
+
               <blockquote className="text-2xl md:text-3xl lg:text-4xl font-display font-medium text-white tracking-tight leading-relaxed relative z-10 italic">
                 {project.testimonial.quote}
               </blockquote>
@@ -755,15 +755,15 @@ export default function ProjectDetail() {
         {/* SEE MORE / NEXT PROJECT LINK FOOTER BLOCK */}
         <div className="px-6 md:px-12 pb-24 md:pb-36">
           <div className="w-full h-[1px] bg-neutral-900 mb-16"></div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
             <div>
               <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase font-medium">STAY IN THE CYCLE</span>
               <h2 className="text-4xl md:text-5xl font-display font-medium tracking-tight mt-1">Explore Next Work</h2>
             </div>
-            
-            <button 
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="font-mono text-xs uppercase tracking-widest hover:opacity-70 transition-opacity flex items-center gap-2 border-b border-white/20 pb-1.5 cursor-none"
             >
               SCROLL BACK TO TOP &uarr;
@@ -771,28 +771,28 @@ export default function ProjectDetail() {
           </div>
 
           {/* Huge interactive Card for the Next Project */}
-          <Link 
+          <Link
             to={`/work/${nextProject.id}`}
             className="group block relative w-full aspect-video md:aspect-[21/9] bg-neutral-950 overflow-hidden border border-neutral-900 rounded-sm"
           >
             {/* Background Image/Video of Next Project */}
             {nextProject.heroImage.endsWith('.mp4') ? (
-              <video 
-                src={nextProject.heroImage} 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[4000ms] ease-out group-hover:scale-105 opacity-40 group-hover:opacity-75" 
+              <video
+                src={nextProject.heroImage}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[4000ms] ease-out group-hover:scale-105 opacity-40 group-hover:opacity-75"
               />
             ) : (
-              <img 
-                src={nextProject.heroImage} 
-                alt={nextProject.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[4000ms] ease-out group-hover:scale-105 opacity-40 group-hover:opacity-75" 
+              <img
+                src={nextProject.heroImage}
+                alt={nextProject.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[4000ms] ease-out group-hover:scale-105 opacity-40 group-hover:opacity-75"
               />
             )}
-            
+
             {/* Smooth Vignette */}
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
 
@@ -824,7 +824,7 @@ export default function ProjectDetail() {
       {/* PORTAL LIGHTBOX MODAL */}
       <AnimatePresence>
         {activeMedia && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -834,8 +834,8 @@ export default function ProjectDetail() {
             {/* Top Close bar */}
             <div className="absolute top-6 left-0 right-0 px-6 md:px-12 flex justify-between items-center text-white z-10">
               <span className="font-mono text-[10px] tracking-widest text-neutral-400 uppercase">INSPECTING ASSET &mdash; PRESS ANYWHERE TO ESCAPE</span>
-              <button 
-                onClick={() => setActiveMedia(null)} 
+              <button
+                onClick={() => setActiveMedia(null)}
                 className="p-3 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-full transition-colors cursor-none text-white flex items-center justify-center"
               >
                 <X className="w-5 h-5" />
@@ -845,17 +845,17 @@ export default function ProjectDetail() {
             {/* Lightbox Main Container */}
             <div className="relative max-w-5xl max-h-[80vh] w-full h-full flex items-center justify-center">
               {activeMedia.type === 'video' ? (
-                <video 
-                  src={activeMedia.url} 
-                  autoPlay 
-                  loop 
-                  controls 
+                <video
+                  src={activeMedia.url}
+                  autoPlay
+                  loop
+                  controls
                   className="max-w-full max-h-full object-contain"
                 />
               ) : (
-                <img 
-                  src={activeMedia.url} 
-                  alt="Expanded Showcase" 
+                <img
+                  src={activeMedia.url}
+                  alt="Expanded Showcase"
                   className="max-w-full max-h-full object-contain select-none"
                 />
               )}
