@@ -1,70 +1,106 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
+  const handleScrollToTop = () => {
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { duration: 1.5 });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer id="contact" className="pt-32 pb-12 px-6 md:px-12 flex flex-col min-h-[90vh] justify-between">
-      <div className="mb-12">
-        <h2 className="font-display text-[14vw] md:text-[9vw] leading-[0.85] tracking-tighter">
-          Let's build<br/>the next<br/>standard.
-        </h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-6 border-t border-neutral-800 pt-12">
-        {/* Navigation */}
-        <div className="flex flex-col gap-3 font-mono text-sm">
-          <span className="text-neutral-500 mb-2 uppercase text-xs tracking-widest">Menu</span>
-          <Link to="/" className="hover:text-white transition-colors text-neutral-300 w-fit">Home</Link>
-          <Link to="/work" className="hover:text-white transition-colors text-neutral-300 w-fit">Work</Link>
-          <Link to="/contact" className="hover:text-white transition-colors text-neutral-300 w-fit">Contact</Link>
+    <footer id="contact" className="bg-black text-white w-full border-t border-neutral-900">
+      {/* TOP SECTION (CONTENT) */}
+      <div className="px-6 md:px-12 pt-16 pb-12">
+        {/* Metadata Header Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-900 pb-8 mb-12 gap-4 text-[10px] tracking-[0.2em] font-mono text-neutral-400 uppercase">
+          <div className="text-left">BRAND & WEB DESIGN STUDIO</div>
+          <div className="text-left md:text-center">VISUAL SYSTEMS — FRONTEND ENGINEERING</div>
+          <div className="text-left md:text-right">EST. 2026 — UNITED KINGDOM</div>
         </div>
 
-        {/* Location */}
-        <div className="flex flex-col gap-3 font-mono text-sm">
-          <span className="text-neutral-500 mb-2 uppercase text-xs tracking-widest">Headquarters</span>
-          <span className="text-neutral-300">100 Premium Way</span>
-          <span className="text-neutral-300">Design District, LDN</span>
-          <span className="text-neutral-500 mt-2">UTC+00:00</span>
-        </div>
+        {/* Main Grid Content */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          {/* Left Column (Info & Contact) */}
+          <div className="md:col-span-6 space-y-8">
+            <p className="text-neutral-400 text-xs leading-relaxed max-w-md font-sans">
+              JPSauce Creative | High-End Brand Identity, Graphic Design, and Frontend Web Engineering. 
+              Integrating high-performance layout architecture, clean visual systems, and bespoke digital solutions 
+              to create internationally competitive narratives for modern brands.
+            </p>
 
-        {/* Social */}
-        <div className="flex flex-col gap-3 font-mono text-sm lowercase">
-          <span className="text-neutral-500 mb-2 uppercase text-xs tracking-widest">Social</span>
-          <a href="#" className="flex items-center gap-1 hover:text-white transition-colors text-neutral-300 w-fit group">
-            instagram <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-          <a href="#" className="flex items-center gap-1 hover:text-white transition-colors text-neutral-300 w-fit group">
-            linkedin <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-          <a href="#" className="flex items-center gap-1 hover:text-white transition-colors text-neutral-300 w-fit group">
-            behance <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-          <a href="#" className="flex items-center gap-1 hover:text-white transition-colors text-neutral-300 w-fit group">
-            github <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-        </div>
+            <div className="space-y-2">
+              <a 
+                href="mailto:jspaul2000@proton.me" 
+                className="block text-2xl md:text-3xl font-display font-medium tracking-tight hover:opacity-80 transition-opacity"
+              >
+                jspaul2000@proton.me
+              </a>
+              <span className="block text-2xl md:text-3xl font-display font-medium tracking-tight text-white/90">
+                +44 (0) 7958 123456
+              </span>
+              <span className="block text-[10px] font-mono tracking-widest text-neutral-500 uppercase mt-1">
+                London, United Kingdom (Remote)
+              </span>
+            </div>
 
-        {/* Newsletter */}
-        <div className="flex flex-col gap-3 font-mono text-sm">
-          <span className="text-neutral-500 mb-2 uppercase text-xs tracking-widest">Newsletter</span>
-          <p className="text-neutral-400 mb-4 text-xs leading-relaxed">Insights on design, tech, and performance.</p>
-          <div className="relative group">
-            <input 
-              type="email" 
-              placeholder="email address" 
-              className="w-full bg-transparent border-b border-neutral-700 py-2 outline-none focus:border-white transition-colors text-sm text-white placeholder:text-neutral-600"
-            />
-            <button className="absolute right-0 top-1/2 -translate-y-1/2 uppercase text-xs text-neutral-500 group-focus-within:text-white hover:text-white transition-colors">
-              Submit
+            {/* Social Links */}
+            <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-neutral-900 max-w-sm">
+              {['Instagram', 'Linkedin', 'Behance', 'Github'].map((social) => (
+                <a
+                  key={social}
+                  href="#"
+                  className="font-mono text-xs uppercase tracking-widest hover:text-neutral-400 transition-colors border-b border-white/10 hover:border-white pb-0.5"
+                >
+                  {social}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Center Column (Explore Circle Button) */}
+          <div className="md:col-span-3 flex justify-center items-center py-8 md:py-0 h-full self-center">
+            <button
+              onClick={handleScrollToTop}
+              className="w-20 h-20 md:w-24 md:h-24 bg-white text-black hover:bg-neutral-200 transition-all duration-300 font-mono text-[10px] md:text-xs uppercase tracking-widest font-bold rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:scale-105"
+            >
+              EXPLORE
             </button>
+          </div>
+
+          {/* Right Column (Featured Work Image) */}
+          <div className="md:col-span-3 flex md:justify-end items-center">
+            <Link 
+              to="/work/lf" 
+              className="group block relative w-full max-w-[280px] aspect-[16/10] overflow-hidden bg-neutral-950 border border-neutral-900"
+            >
+              <img 
+                src="/iphone-lf.jpg" 
+                alt="Case Study Showcase" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+              />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+            </Link>
           </div>
         </div>
       </div>
-      
-      <div className="flex justify-between items-center mt-24 font-mono text-xs text-neutral-600 uppercase tracking-widest">
-        <span>© 2026 AGENCY</span>
-        <span>All Rights Reserved</span>
+
+      {/* BOTTOM SECTION (GIANT EMBOSSED METALLIC BANNER) */}
+      <div className="relative w-full overflow-hidden border-t border-neutral-900">
+        {/* Floating Copyright info overlay on top-left of the banner */}
+        <div className="absolute top-6 left-6 md:top-8 md:left-12 z-10 font-mono text-[9px] md:text-[10px] tracking-widest leading-relaxed text-neutral-400 select-none">
+          <span className="block font-medium text-white/70">JPSauce Creative Co.</span>
+          <span>© 2026 JPSAUCE STUDIO. ALL RIGHTS RESERVED.</span>
+        </div>
+
+        {/* Banner image */}
+        <img 
+          src="/jpsauce-metallic-banner.png" 
+          alt="JPSauce Banner" 
+          className="w-full h-auto min-h-[220px] md:min-h-0 object-cover origin-center"
+        />
       </div>
     </footer>
   );
