@@ -126,11 +126,15 @@ export default function Footer() {
           <span>© 2026 JPSAUCE STUDIO. ALL RIGHTS RESERVED.</span>
         </div>
 
-        {/* Banner image with Parallax effect */}
-        <motion.img 
+        {/* Banner video with Parallax effect */}
+        <motion.video 
           style={{ y }}
-          src="/jpsauce-metallic-banner.png" 
-          alt="JPSauce Banner" 
+          src="/footervideo.mp4" 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          preload="auto"
           className="absolute left-0 right-0 w-full h-[calc(100%+160px)] top-[-80px] object-cover origin-center select-none"
         />
       </div>
