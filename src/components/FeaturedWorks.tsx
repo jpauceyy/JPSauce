@@ -9,7 +9,7 @@ const projects = [
     tags: ['BRANDING', 'GRAPHIC DESIGN'],
     title: 'IXO ESPORTS REVAMP',
     desc: 'Fusing dynamic tech-focused typography with custom jersey layouts and modular team identity assets.',
-    image: '/IXO.jpg',
+    image: '/IXO.webp',
     hoverVideo: '/ixo-jersey.mp4',
     tagStyle: 'bg-gradient-to-b from-neutral-800/90 to-neutral-950/90 text-white backdrop-blur-md border border-white/10'
   },
@@ -18,7 +18,7 @@ const projects = [
     tags: ['WEB DESIGN', 'UI/UX'],
     title: 'LF COACHING',
     desc: 'Fusing minimalist user-interface structure with sharp data presentation to maximize high-intent client inquiries and conversions.',
-    image: '/LF.jpg',
+    image: '/LF.webp',
     hoverVideo: '/fenners-reel.mp4',
     tagStyle: 'bg-white/20 text-white backdrop-blur-md border border-white/20'
   },
@@ -35,7 +35,7 @@ const projects = [
     tags: ['BRANDING', 'GRAPHIC DESIGN'],
     title: 'OBN',
     desc: 'OblivionXC is a UK eSports organisation refounded in 2023 focusing on CSGO and Call Of Duty and exploring more within eSports',
-    image: '/obn-logo.jpg',
+    image: '/obn-logo.webp',
     hoverVideo: '/obn-showcase.mp4',
     tagStyle: 'bg-black/70 text-white backdrop-blur-sm border border-white/10'
   },
@@ -44,7 +44,7 @@ const projects = [
     tags: ['WEB DESIGN', 'UI/UX'],
     title: 'GRANDFPS',
     desc: 'A dynamic, high-visibility visual identity and broadcast overlay package designed for Europe’s premier FPS championship.',
-    image: '/grandcover.png',
+    image: '/grandcover.webp',
     hoverVideo: '/grand-vid.mp4',
     tagStyle: 'bg-black/70 text-white backdrop-blur-sm border border-white/10'
   }

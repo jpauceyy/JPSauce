@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
 
 const mockups = [
-  { url: '/iphone-lf.jpg', alt: 'LF Coaching Mobile UI' },
-  { url: '/iphone-grandzie.jpg', alt: 'GrandzieFPS Mobile UI' },
-  { url: '/ipad-mockup.jpg', alt: 'Online Coaching Tablet Onboarding' }
+  { url: '/iphone-lf.webp', alt: 'LF Coaching Mobile UI' },
+  { url: '/iphone-grandzie.webp', alt: 'GrandzieFPS Mobile UI' },
+  { url: '/ipad-mockup.webp', alt: 'Online Coaching Tablet Onboarding' }
 ];
 
 export default function Footer() {
@@ -48,7 +48,7 @@ export default function Footer() {
 
         {/* Main Grid Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column (Info & Contact) */}
           <div className="md:col-span-8 space-y-10">
             <div className="space-y-4">
@@ -56,21 +56,21 @@ export default function Footer() {
                 JPSauce Creative Co.
               </span>
               <p className="text-neutral-500 text-xs leading-relaxed max-w-sm font-sans">
-                High-End Brand Identity, Graphic Design, and Frontend Web Engineering. 
-                Integrating brand identity, interactive experience design, and Gen-AI visual technology, 
+                High-End Brand Identity, Graphic Design, and Frontend Web Engineering.
+                Integrating brand identity, interactive experience design, and Gen-AI visual technology,
                 we create internationally competitive digital visual narratives for brands.
               </p>
             </div>
 
             <div className="space-y-4 pt-4">
-              <a 
-                href="mailto:jspaul2000@proton.me" 
+              <a
+                href="mailto:jspaul2000@proton.me"
                 className="block text-3xl sm:text-4xl md:text-5xl font-display font-medium tracking-tight hover:text-neutral-400 transition-colors duration-300"
               >
                 jspaul2000@proton.me
               </a>
               <a
-                href="tel:+447958123456" 
+                href="tel:+447958123456"
                 className="block text-3xl sm:text-4xl md:text-5xl font-display font-medium tracking-tight hover:text-neutral-400 transition-colors duration-300"
               >
                 +44 7958 123456
@@ -96,15 +96,15 @@ export default function Footer() {
 
           {/* Right Column (Rotating Mockups) */}
           <div className="md:col-span-4 flex justify-start md:justify-end items-center">
-            <Link 
-              to="/work" 
+            <Link
+              to="/work"
               className="group block relative w-full max-w-[340px] aspect-[16/10] overflow-hidden bg-neutral-950 border border-neutral-900/60 rounded-sm"
             >
               <AnimatePresence mode="wait">
-                <motion.img 
+                <motion.img
                   key={currentMockupIndex}
-                  src={mockups[currentMockupIndex].url} 
-                  alt={mockups[currentMockupIndex].alt} 
+                  src={mockups[currentMockupIndex].url}
+                  alt={mockups[currentMockupIndex].alt}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.8 }}
                   exit={{ opacity: 0 }}
@@ -121,20 +121,20 @@ export default function Footer() {
       {/* BOTTOM SECTION (GIANT EMBOSSED METALLIC BANNER) */}
       <div className="relative w-full h-[300px] md:h-[45vh] overflow-hidden border-t border-neutral-900/60">
         {/* Floating Copyright info overlay on top-left of the banner */}
-        <div className="absolute top-8 left-6 md:top-12 md:left-12 z-20 font-mono text-[10px] tracking-[0.25em] leading-relaxed text-neutral-500 select-none">
-          <span className="block font-medium text-white/70">JPSauce Creative Co., Ltd.</span>
-          <span>© 2026 JPSAUCE STUDIO. ALL RIGHTS RESERVED.</span>
+        <div className="absolute top-8 left-6 md:top-12 md:left-12 z-20 font-mono text-[10px] tracking-[0.25em] leading-relaxed text-neutral-500 select-none bg-neutral-900/40 backdrop-blur-xl border border-white/10 shadow-2xl py-2 px-5">
+          <span className="block font-medium text-white">JPSauce Creative Co., Ltd.</span>
+          <span className="text-white">© 2026 JPSAUCE STUDIO. ALL RIGHTS RESERVED.</span>
         </div>
 
         {/* Banner video with Parallax effect */}
-        <motion.video 
+        <motion.video
           style={{ y }}
-          src="/footervideo.mp4" 
-          autoPlay 
-          loop 
-          muted 
+          src="/footervideo.mp4"
+          autoPlay
+          loop
+          muted
           playsInline
-          preload="auto"
+          preload="none"
           className="absolute left-0 right-0 w-full h-[calc(100%+160px)] top-[-80px] object-cover origin-center select-none"
         />
       </div>

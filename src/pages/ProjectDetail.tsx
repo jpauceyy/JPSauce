@@ -67,8 +67,8 @@ const projectsDatabase: Record<string, Project> = {
       execution: 'For the pro jersey and merchandise line, we engineered contrasting home/away jersey concepts featuring custom contour linework and sharp branding placements. Complementary lifestyle tees bring the core IXO mark to everyday streetwear, delivering a premium merchandise collection for fans and players alike. Across digital touchpoints, we supplied IXO with a modular broadcast and graphics asset kit. From dynamic versus-screen templates to match result graphics, every component was built for maximum speed and readability during live tournament streams.'
     },
     gallery: [
-      { url: '/IXO.jpg', type: 'image', caption: 'Esports logo design.', aspect: 'aspect-[16/10]' },
-      { url: '/graphics3.jpg', type: 'image', caption: 'Custom esports apparel design.', aspect: 'aspect-[4/3]' },
+      { url: '/IXO.webp', type: 'image', caption: 'Esports logo design.', aspect: 'aspect-[16/10]' },
+      { url: '/graphics3.webp', type: 'image', caption: 'Custom esports apparel design.', aspect: 'aspect-[4/3]' },
       { url: '/ixo-overview.mp4', type: 'video', caption: 'Esports jersey mockup.', aspect: 'aspect-[21/9]' },
       { url: '/ixo-clothing.webp', type: 'image', caption: 'Twitch stream branding.', aspect: 'aspect-[4/3]' },
       { url: '/ixo-gameday.webp', type: 'image', caption: 'A promotional Call of Duty "GAMEDAY" match poster from the Vixens League.', aspect: 'aspect-[16/10]' }
@@ -99,11 +99,11 @@ const projectsDatabase: Record<string, Project> = {
       execution: 'To capture the intense, high-performance nature of personal coaching, we engineered a sleek, dark-mode visual hierarchy anchored by bold crimson accents and aggressive typography. Custom interactive elements—including a dynamic macro/one-rep max calculator and structured package comparison cards—give prospective clients immediate, engaging tools to evaluate their fitness goals directly on the page. Strategic conversion design was baked into every scroll depth. From clear "How It Works" step-by-step roadmaps and social proof testimonials to an integrated, low-friction application form, the layout seamlessly guides visitors from initial motivation to submitting their coaching request. The responsive grid ensures crisp contrast and effortless navigation across all mobile and desktop devices.'
     },
     gallery: [
-      { url: '/LF.jpg', type: 'image', caption: 'High-converting personal trainer website', aspect: 'aspect-[16/10]' },
-      { url: '/ipad-mockup.jpg', type: 'image', caption: 'Online coaching onboarding form.', aspect: 'aspect-[4/3]' },
+      { url: '/LF.webp', type: 'image', caption: 'High-converting personal trainer website', aspect: 'aspect-[16/10]' },
+      { url: '/ipad-mockup.webp', type: 'image', caption: 'Online coaching onboarding form.', aspect: 'aspect-[4/3]' },
       { url: '/fenners-reel.mp4', type: 'video', caption: 'Cinematic brand video reel designed to capture athlete intensity.', aspect: 'aspect-[16/9]' },
       { url: '/lf-desktop.jpg', type: 'image', caption: 'Luxury fitness website design.', aspect: 'aspect-[4/3]' },
-      { url: '/iphone-lf.jpg', type: 'image', caption: 'Dark mode fitness UI design.', aspect: 'aspect-[16/10]' }
+      { url: '/iphone-lf.webp', type: 'image', caption: 'Dark mode fitness UI design.', aspect: 'aspect-[16/10]' }
     ],
     testimonial: {
       quote: "The custom site completely elevated our brand positioning. We went from looking like every other online fitness coach to a high-end, authority brand. Our onboarding conversion rate increased noticeably within weeks of launch.",
@@ -124,14 +124,14 @@ const projectsDatabase: Record<string, Project> = {
     client: 'AVNG eSports',
     role: 'Creative Director',
     tags: ['Esports Branding, Graphic Design, Art Direction'],
-    heroImage: '/avng-banner.jpg',
+    heroImage: '/avng-banner.webp',
     story: {
       overview: 'AVNG Esports needed a raw, disruptive visual strategy rooted in underground gaming culture and digital distortion. Moving away from corporate, family-friendly esports aesthetics, we developed a high-octane glitch campaign canvas designed to capture competitive gaming audiences across live tournament streams, team jerseys, content creator kits, and social media ecosystems.',
       challenge: 'Esports orgs often struggle to cut through online noise without relying on generic mascot logos and tired gradient templates. The challenge for AVNG was to create a modular, subversive team identity that felt authentic to hardcore gaming culture while remaining commercially scalable across physical pro jerseys, digital Twitch overlays, and merch drops.',
       execution: 'As Creative Director, I engineered a high-contrast, typographic-heavy design framework powered by glitch art mechanics and industrial UI layouts. Key deliverables included:'
     },
     gallery: [
-      { url: '/avng-banner.jpg', type: 'image', caption: 'The main AVNG team crest layout, player apparel print keys, and tournament media graphics.', aspect: 'aspect-[16/10]' },
+      { url: '/avng-banner.webp', type: 'image', caption: 'The main AVNG team crest layout, player apparel print keys, and tournament media graphics.', aspect: 'aspect-[16/10]' },
       { url: '/avng.gif', type: 'image', caption: 'Glitch-heavy animated loop highlighting active visual distortion.', aspect: 'aspect-[4/3]' },
       { url: '/avng-roster.mp4', type: 'video', caption: 'Esports team jersey design', aspect: 'aspect-[16/9]' },
       { url: '/defeat-avng.webp', type: 'image', caption: 'AVNG Esports active Match Day Defeat template layout.', aspect: 'aspect-[3/4]' },
@@ -156,18 +156,18 @@ const projectsDatabase: Record<string, Project> = {
     client: 'Oblivion Esports',
     role: 'Brand Strategist & Lead Designer',
     tags: ['Branding, Graphic Design, Apparel Direction'],
-    heroImage: '/obn-banner.jpg',
+    heroImage: '/obn-banner.webp',
     story: {
       overview: 'Oblivion XC is an established UK esports organization competing across CS:GO and Call of Duty. Refounded to reset their visual footprint, they commissioned a complete brand transformation to reflect a clinical, tactical competitive strategy. The resulting visual language is clean, menacing, and deeply rooted in athletic lifestyle garments and high-contrast match-day media.',
       challenge: 'Most esports apparel relies on loud, over-saturated colors and chaotic sublimated prints that players feel hesitant to wear off-stage. Oblivion needed a tactical, minimalist design system that seamlessly bridged elite tournament performance wear with high-end urban streetwear while maintaining high legibility on live Twitch feeds.',
       execution: 'We engineered a stark, geometric brand crest paired with a custom monospaced utility grid system. This identity was deployed across physical performance wear, custom technical windbreakers, and modular broadcast panels. Subtle halftone patterns and fine technical vectors echo military layout aesthetics, forging an ultra-cohesive digital and physical ecosystem.'
     },
     gallery: [
-      { url: '/welcome-obn.jpg', type: 'image', caption: 'Roster announcement graphic template featuring tactical player cutouts, custom vector badges, and paper-texture overlays.', aspect: 'aspect-[16/9]' },
-      { url: '/obn-gameday2.jpg', type: 'image', caption: 'High-Disciplined Tactical Palettes', aspect: 'aspect-[16/9]' },
+      { url: '/welcome-obn.webp', type: 'image', caption: 'Roster announcement graphic template featuring tactical player cutouts, custom vector badges, and paper-texture overlays.', aspect: 'aspect-[16/9]' },
+      { url: '/obn-gameday2.webp', type: 'image', caption: 'High-Disciplined Tactical Palettes', aspect: 'aspect-[16/9]' },
       { url: '/obn.mp4', type: 'video', caption: 'The Oblivion esports clinical and tactical brand experience in motion.', aspect: 'aspect-[16/9]' },
       { url: '/gameday-obn.jpg', type: 'image', caption: '"VS" Match-day announcement graphics featuring stream links, match timings, and opposing team logo placements.', aspect: 'aspect-[3/4]' },
-      { url: '/gf-obn.jpg', type: 'image', caption: '"GRAND FINALS" poster template featuring tactical character art, hand-drawn typography accents (#FEARTHEUNKNOWN), and stark display typography.', aspect: 'aspect-[3/4]' }
+      { url: '/gf-obn.webp', type: 'image', caption: '"GRAND FINALS" poster template featuring tactical character art, hand-drawn typography accents (#FEARTHEUNKNOWN), and stark display typography.', aspect: 'aspect-[3/4]' }
     ],
     testimonial: {
       quote: "The rebrand completely transformed how our org is perceived in the competitive scene. The match-day asset kits, roster reveal templates, and Grand Finals graphics gave our social team the ability to push out top-tier, aggressive visuals in minutes during live tournaments. Exactly the menacing, high-performance identity Oblivion needed.",
@@ -188,18 +188,18 @@ const projectsDatabase: Record<string, Project> = {
     client: 'GrandFPS PC Optimiser',
     role: 'Lead Brand & Motion Designer',
     tags: ['Web Design, UI/UX, Motion Design, Brand System'],
-    heroImage: '/granddesktop.jpg',
+    heroImage: '/granddesktop.webp',
     story: {
       overview: 'GrandzieFPS provides deep system-level tuning, BIOS optimization, and latency reduction for competitive gamers. However, their digital presence needed to match the precision of their technical services. The goal was to replace generic tech layouts with an aggressive, high-contrast digital experience that instills immediate trust, communicates technical expertise, and converts high-intent traffic into bookings.',
       challenge: 'We engineered a bespoke web design built around a sleek, high-tech dark mode UI powered by neon green accenting. Every section—from real-time FPS benchmark comparisons to tier pricing cards—was strategically structured to guide visitors seamlessly toward booking an optimization package or joining the Discord community.',
       execution: 'Structure and speed were prioritized across all viewports. We streamlined the tier selection architecture so users can quickly evaluate optimization packages—from fresh Windows setups to full system overhauls. Integrated Discord CTAs, responsive mobile layouts, and subtle micro-interactions ensure a frictionless conversion flow from first scroll to checkout.'
     },
     gallery: [
-      { url: '/iphone-grandzie.jpg', type: 'image', caption: 'FLUID MOBILE EXPERIENCE & RESPONSIVE LAYOUTS.', aspect: 'aspect-[16/10]' },
-      { url: '/grand-ipad.jpg', type: 'image', caption: 'DYNAMIC PRICING & INTERACTIVE TIER CARDS', aspect: 'aspect-[16/9]' },
+      { url: '/iphone-grandzie.webp', type: 'image', caption: 'FLUID MOBILE EXPERIENCE & RESPONSIVE LAYOUTS.', aspect: 'aspect-[16/10]' },
+      { url: '/grand-ipad.webp', type: 'image', caption: 'DYNAMIC PRICING & INTERACTIVE TIER CARDS', aspect: 'aspect-[16/9]' },
       { url: '/grand-vid.mp4', type: 'video', caption: 'High-visibility team scoreboard and real-time live ticker layouts.', aspect: 'aspect-[16/9]' },
-      { url: '/grandfps2.jpg', type: 'image', caption: 'High-concept brochure graphics.', aspect: 'aspect-[1750/2480]' },
-      { url: '/grand-phone.jpg', type: 'image', caption: 'Mobile-first companion application and real-time match statistics view.', aspect: 'aspect-[4/3]' }
+      { url: '/grandfps2.webp', type: 'image', caption: 'High-concept brochure graphics.', aspect: 'aspect-[1750/2480]' },
+      { url: '/grand-phone.webp', type: 'image', caption: 'Mobile-first companion application and real-time match statistics view.', aspect: 'aspect-[4/3]' }
     ],
     testimonial: {
       quote: "The web design completely redefined our digital presence. It communicates pure performance from the moment a user lands on the site, turning casual site visitors into booked tuning clients and vibrant community members.",
@@ -220,18 +220,18 @@ const projectsDatabase: Record<string, Project> = {
     client: 'TUKI UK & Ireland',
     role: 'Lead Visual Designer & Brand Strategist',
     tags: ['BRANDING', 'GRAPHIC DESIGN', 'APPAREL'],
-    heroImage: '/tukiwinners.jpg',
+    heroImage: '/tukiwinners.webp',
     story: {
       overview: 'Competing at the highest level in the UK & Ireland esports scene requires more than just in-game skill; it demands a distinct, instantly recognizable brand presence. Tuki eSports needed a cohesive visual identity that could command attention across physical merch drops, streaming platforms, and social media channels during high-stakes tournament play.',
       challenge: 'We developed a full-suite visual identity anchored by custom pro team apparel, dynamic matchday graphics, and bold roster announcement templates. Utilizing an aggressive red-and-black marble color scheme, high-energy typography, and sleek 3D logo accents, the design system bridges the gap between competitive team apparel and elite digital broadcasting.',
       execution: 'For the official team jersey design, we engineered a custom marble-texture graphic featuring bold contrast piping, clean logo placement, and sharp player back-nametags. The apparel layout delivers a sleek, athletic silhouette tailored for both stage play and official fan merch stores. On the broadcast side, we created modular social media and stream asset packs—including Gameday match banners, group standing announcements, and win-state overlays. Each template was engineered for rapid editing, allowing the organization to roll out real-time tournament updates during live events without compromising visual quality.'
     },
     gallery: [
-      { url: '/gameday.jpg', type: 'image', caption: 'HIGH-IMPACT SOCIAL MEDIA MATCH DAY AND LINEUP GRAPHICS.', aspect: 'aspect-[16/9]' },
-      { url: '/jersey-ad.jpg', type: 'image', caption: 'CHAMPIONSHIP JERSEY CAMPAIGN EDITORIAL PHOTOSHOOT AND LIFESTYLE PRESENTATION.', aspect: 'aspect-[1440/1800]' },
+      { url: '/gameday.webp', type: 'image', caption: 'HIGH-IMPACT SOCIAL MEDIA MATCH DAY AND LINEUP GRAPHICS.', aspect: 'aspect-[16/9]' },
+      { url: '/jersey-ad.webp', type: 'image', caption: 'CHAMPIONSHIP JERSEY CAMPAIGN EDITORIAL PHOTOSHOOT AND LIFESTYLE PRESENTATION.', aspect: 'aspect-[1440/1800]' },
       { url: '/tuki-video.mp4', type: 'video', caption: 'Dynamic motion graphic sequence and cinematic tournament highlights loop.', aspect: 'aspect-[16/9]' },
-      { url: '/Winners-of-div7.jpg', type: 'image', caption: 'Division 7 Grand Finals championship results announcement.', aspect: 'aspect-[2480/3508]' },
-      { url: '/winners.jpg', type: 'image', caption: 'Group Stage celebration showcase.', aspect: 'aspect-[2480/3508]' }
+      { url: '/Winners-of-div7.webp', type: 'image', caption: 'Division 7 Grand Finals championship results announcement.', aspect: 'aspect-[2480/3508]' },
+      { url: '/winners.webp', type: 'image', caption: 'Group Stage celebration showcase.', aspect: 'aspect-[2480/3508]' }
     ],
     testimonial: {
       quote: "The unified visual redesign transformed Tuki eSports from a competitive roster into a professional esports brand. The merchandise sold out instantly, and our visual identity is now recognized across the entire UK & Ireland championship circuit.",
@@ -239,7 +239,7 @@ const projectsDatabase: Record<string, Project> = {
       role: "General Manager, TUKI Esports"
     },
     artDirectionTitle: 'Art Direction',
-    artDirectionDesc: 'The art direction combines raw, urban tactical textures with ultra-modern sports graphics. High-contrast typography, stylized topographic pattern work, and vibrant red accents create an intense, competitive aesthetic that highlights roster victories, game-day match-ups, and merchandise drops across every digital touchpoint.',
+    artDirectionDesc: 'The visual direction combines raw, urban tactical textures with ultra-modern sports graphics. High-contrast typography, stylized topographic pattern work, and vibrant red accents create an intense, competitive aesthetic that highlights roster victories, game-day match-ups, and merchandise drops across every digital touchpoint.',
     artDirectionSubDesc: 'Polished monochromatic bases, high-contrast display typography, and structured grid frameworks. A highly disciplined visual system that treats gaming lifestyle apparel and digital victory graphics with the prestige of a luxury brand.'
   }
 };
