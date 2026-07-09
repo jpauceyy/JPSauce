@@ -204,12 +204,13 @@ export default function Contact() {
           'Estimated Budget': formData.budget,
           'Referral Source': formData.source,
           Message: formData.message,
-          _subject: `New Project Inquiry from ${formData.name}`
+          _subject: `New Project Inquiry from ${formData.name}`,
+          _captcha: 'false'
         })
       });
 
       const result = await response.json();
-      if (result.success === 'true' || response.ok) {
+      if (result.success === 'true' || result.success === true || response.ok) {
         setFormStatus('success');
         setFormData({
           name: '',
@@ -223,10 +224,11 @@ export default function Contact() {
           message: ''
         });
       } else {
+        console.warn('FormSubmit AJAX failure response:', result);
         setFormStatus('error');
       }
     } catch (error) {
-      console.error(error);
+      console.error('FormSubmit AJAX request error:', error);
       setFormStatus('error');
     }
   };
