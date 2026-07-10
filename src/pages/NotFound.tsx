@@ -15,7 +15,7 @@ export default function NotFound() {
 
   return (
     <div className="bg-[#030303] text-white min-h-screen w-full relative flex flex-col justify-center overflow-hidden selection:bg-white selection:text-black">
-      
+
       {/* 404 PRELOADER */}
       <AnimatePresence>
         {loading && (
@@ -26,7 +26,7 @@ export default function NotFound() {
             className="fixed inset-0 bg-[#090909] z-50 flex flex-col items-center justify-center gap-4"
           >
             {/* Quick warning text sequence */}
-            <motion.span 
+            <motion.span
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -34,23 +34,22 @@ export default function NotFound() {
             >
               SYSTEM WARNING
             </motion.span>
-            <motion.h2 
+            <motion.h2
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.4 }}
               className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight uppercase font-light text-neutral-200"
             >
-              Oh Foda-se...
             </motion.h2>
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* MAIN 404 PAGE CONTENT */}
-      <div className="px-6 md:px-12 pt-36 pb-16 max-w-7xl w-full mx-auto flex flex-col justify-between min-h-screen relative">
-        
+      <div className="section-padding w-full mx-auto flex flex-col justify-between min-h-screen relative">
+
         {/* Top Section: Text Block */}
-        <div className="text-left font-sans text-3xl sm:text-5xl md:text-6xl font-light tracking-tight leading-[1.2] text-white">
+        <div className="text-left font-sans text-3xl sm:text-5xl md:text-6xl font-light tracking-tight leading-[1.2] text-white mt-8">
           <p>Sh#t!! You were so close but you fell on a</p>
           <p>404 page instead...</p>
           <p className="mt-2 text-neutral-300">Foda-se</p>
@@ -63,7 +62,7 @@ export default function NotFound() {
 
         {/* Bottom Section: Navigation on left, Videos on right */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-12 mt-16 w-full">
-          
+
           {/* Bottom Left: Return Link */}
           <div className="pb-2">
             <Link
@@ -75,18 +74,18 @@ export default function NotFound() {
           </div>
 
           {/* Bottom Right: Video Cards */}
-          <div className="grid grid-cols-3 gap-3 md:gap-4 w-full max-w-[480px]">
+          <div className="flex flex-row justify-between items-end w-full md:w-[50%]">
             {[
-              { src: 'https://cristianaaraujo.s3.eu-west-2.amazonaws.com/404/inline-540.mp4', delay: 0.1 },
-              { src: 'https://cristianaaraujo.s3.eu-west-2.amazonaws.com/404/ice-skating-540.mp4', delay: 0.2 },
-              { src: 'https://cristianaaraujo.s3.eu-west-2.amazonaws.com/404/ski-540.mp4', delay: 0.3 }
+              { src: '/Lan-video.mp4', delay: 0.1 },
+              { src: '/airshow.mp4', delay: 0.2 },
+              { src: '/lf-benching-brother.mp4', delay: 0.3 }
             ].map((video, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 animate={!loading ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: video.delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="aspect-[3/4] relative bg-neutral-950 overflow-hidden border border-neutral-900 group rounded-sm"
+                className="aspect-[9/16] relative bg-neutral-950 overflow-hidden border border-neutral-900 group rounded-sm w-[32%]"
               >
                 <video
                   src={video.src}
@@ -101,7 +100,7 @@ export default function NotFound() {
           </div>
 
         </div>
-        
+
       </div>
 
     </div>

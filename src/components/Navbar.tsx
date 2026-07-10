@@ -28,7 +28,7 @@ export default function Navbar() {
       >
         <Link to="/" className="flex items-center">
           <img 
-            src="/jp-logo.png" 
+            src="/logo.png" 
             alt="Logo" 
             className={`object-contain transition-all duration-700 ease-[0.16,1,0.3,1] ${isScrolled ? 'w-8 h-8 md:w-10 md:h-10' : 'w-12 h-12 md:w-16 md:h-16'}`} 
           />

@@ -47,9 +47,33 @@ export default function About() {
             I’m Joe, a UK-based digital designer and front-end developer fusing visual identity with clean engineering. Having picked up the craft over a decade ago, my journey has evolved from designing for elite esports rosters, sponsors, and creators into building comprehensive digital systems. Today, I bridge the gap between heavy graphic identity and minimalist web development to deliver mature, high-taste digital experiences.
           </p>
           
-          <Link to="/contact" className="inline-flex items-center gap-1 text-lg font-medium hover:opacity-70 transition-opacity w-fit">
-            Get Started <ArrowUpRight className="w-5 h-5" />
-          </Link>
+          <div className="relative">
+            <Link 
+              to="/contact" 
+              className="group relative inline-flex items-center text-white font-sans font-medium text-base tracking-tight leading-none pointer-events-auto"
+              style={{ filter: 'url(#goo)' }}
+            >
+              {/* Pill-shaped Text Container */}
+              <div className="bg-[#194896] border border-black/10 py-3 px-6 rounded-full font-semibold relative z-10 transition-colors duration-300">
+                Get Started
+              </div>
+              {/* Overlapping Circle with Arrow */}
+              <div className="w-10 h-10 -ml-2 bg-[#194896] border border-black/10 rounded-full flex items-center justify-center relative z-0 transition-all duration-[600ms] ease-[0.16,1,0.3,1] group-hover:translate-x-3 group-hover:rotate-45">
+                <ArrowUpRight className="w-4 h-4 text-white" />
+              </div>
+            </Link>
+            
+            {/* Gooey SVG Filter */}
+            <svg className="hidden" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </motion.section>
