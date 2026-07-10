@@ -6,6 +6,7 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Work from './pages/Work';
@@ -85,6 +86,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <LenisSetup />
+      <Analytics />
       
       <AnimatePresence mode="wait">
         {showSplash && <SplashScreen key="splash" onComplete={() => setShowSplash(false)} />}
