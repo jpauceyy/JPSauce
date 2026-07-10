@@ -22,7 +22,7 @@ export default function Navbar() {
           transition-all duration-700 ease-[0.16,1,0.3,1]
           ${isScrolled 
             ? 'w-full md:w-[600px] lg:w-[400px] py-3 px-6 md:px-8 bg-neutral-900/40 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl' 
-            : 'w-full py-8 px-6 md:px-12 mix-blend-difference border border-transparent'
+            : 'w-full py-8 px-6 md:px-12 border border-transparent'
           }
         `}
       >
@@ -30,7 +30,7 @@ export default function Navbar() {
           <img 
             src="/logo.png" 
             alt="Logo" 
-            className={`object-contain transition-all duration-700 ease-[0.16,1,0.3,1] ${isScrolled ? 'w-8 h-8 md:w-10 md:h-10' : 'w-12 h-12 md:w-16 md:h-16'}`} 
+            className={`object-contain brightness-0 invert transition-all duration-700 ease-[0.16,1,0.3,1] ${isScrolled ? 'w-8 h-8 md:w-10 md:h-10' : 'w-12 h-12 md:w-16 md:h-16'}`} 
           />
         </Link>
         <div className="relative">

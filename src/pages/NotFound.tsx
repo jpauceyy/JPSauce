@@ -14,7 +14,7 @@ export default function NotFound() {
   }, []);
 
   return (
-    <div className="bg-[#030303] text-white min-h-screen w-full relative flex flex-col justify-center overflow-hidden selection:bg-white selection:text-black">
+    <div className="bg-[#030303] text-white min-h-screen w-full relative flex flex-col justify-center overflow-hidden">
 
       {/* 404 PRELOADER */}
       <AnimatePresence>

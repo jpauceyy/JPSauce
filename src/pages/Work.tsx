@@ -100,7 +100,7 @@ export default function Work() {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="bg-black text-white selection:bg-white selection:text-black">
+    <div className="bg-black text-white">
       <div ref={targetRef} className="relative w-full">
         {/* Sticky HUD */}
         <div className="sticky top-0 h-screen w-full pointer-events-none z-10 overflow-hidden">

@@ -90,7 +90,7 @@ export default function App() {
         {showSplash && <SplashScreen key="splash" onComplete={() => setShowSplash(false)} />}
       </AnimatePresence>
 
-      <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+      <div className="min-h-screen bg-black text-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -82,13 +82,18 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6 border-t border-neutral-900 max-w-sm font-mono text-[10px] tracking-[0.2em]">
-              {['INSTAGRAM', 'THREADS', 'FACEBOOK', 'BLOG'].map((social) => (
+              {[
+                { name: 'BEHANCE', href: 'https://www.behance.net/jpaul00' },
+                { name: 'TWITTER', href: 'https://x.com/JSPaul00' },
+              ].map(({ name, href }) => (
                 <a
-                  key={social}
-                  href="#"
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-neutral-400 transition-colors border-b border-transparent hover:border-neutral-400 pb-0.5"
                 >
-                  {social}
+                  {name}
                 </a>
               ))}
             </div>

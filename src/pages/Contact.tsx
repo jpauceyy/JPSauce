@@ -23,6 +23,26 @@ const faqs: FaqItem[] = [
   {
     question: "Do you offer post-launch support?",
     answer: "Yes. I offer tailored post-launch retainers that cover ongoing technical updates, regular visual refinements, and optimization checks to ensure your application continues to deliver exceptional user-experiences."
+  },
+  {
+    question: "What do your \"Esports Revamp\" packages include?",
+    answer: "A standard team or player revamp covers your complete visual identity: a custom primary logo/mascot, alternate sub-logos, Twitter/X headers, Twitch overlays, and matching profile graphics."
+  },
+  {
+    question: "Can I use the custom graphics for merchandise and apparel?",
+    answer: "Yes, 100%. All of my custom branding packages include full commercial rights. When the project is finalized, I provide high-resolution, vector-ready source files perfectly optimized for screen printing, embroidery, or digital jerseys."
+  },
+  {
+    question: "How does the design process work?",
+    answer: "We start with a brief discovery phase to nail down your aesthetic goals (whether that's minimalist dark-mode web layouts or aggressive, high-energy gaming graphics). From there, I deliver initial concepts, refine them based on your feedback, and then move to final production or live coding."
+  },
+  {
+    question: "What are your payment terms?",
+    answer: "I require a 50% upfront deposit to secure your spot in my calendar. The remaining 50% is due upon final approval of the designs or right before the website goes live."
+  },
+  {
+    question: "Can you build a website if I already have a logo and branding?",
+    answer: "Absolutely. I can work with your existing brand guidelines, assets, and color palettes to build a cohesive, premium website that aligns perfectly with your established identity."
   }
 ];
 
@@ -87,21 +107,20 @@ function CustomSelect({ id, label, value, options, placeholder = "SELECT THE OPT
 
   return (
     <div ref={containerRef} className="flex flex-col relative w-full">
-      <label 
+      <label
         className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-200 block mb-3.5"
       >
         {label}
       </label>
-      
+
       <button
         id={id}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full bg-[#111111] border rounded-none h-16 px-5 flex items-center justify-between text-left transition-all duration-200 outline-none select-none ${
-          isOpen 
-            ? 'border-[#194896] shadow-[0_0_12px_rgba(25,72,150,0.15)]' 
-            : 'border-neutral-900/80 hover:border-neutral-800'
-        }`}
+        className={`w-full bg-[#111111] border rounded-none h-16 px-5 flex items-center justify-between text-left transition-all duration-200 outline-none select-none ${isOpen
+          ? 'border-[#194896] shadow-[0_0_12px_rgba(25,72,150,0.15)]'
+          : 'border-neutral-900/80 hover:border-neutral-800'
+          }`}
       >
         <span className={`font-mono text-xs uppercase tracking-[0.05em] ${value ? 'text-white' : 'text-neutral-500'}`}>
           {value ? value.toUpperCase() : placeholder}
@@ -114,12 +133,12 @@ function CustomSelect({ id, label, value, options, placeholder = "SELECT THE OPT
       </button>
 
       {/* Hidden input to support standard HTML validation / required field checking */}
-      <input 
+      <input
         type="text"
         tabIndex={-1}
         required={required}
         value={value}
-        onChange={() => {}}
+        onChange={() => { }}
         className="sr-only pointer-events-none absolute bottom-0 left-1/2 w-0 h-0 opacity-0"
       />
 
@@ -142,16 +161,14 @@ function CustomSelect({ id, label, value, options, placeholder = "SELECT THE OPT
                     onClick={() => handleSelect(opt)}
                     className="w-full h-14 px-5 flex items-center justify-between text-left hover:bg-neutral-800/60 transition-colors group select-none"
                   >
-                    <span className={`font-mono text-xs uppercase tracking-[0.05em] transition-colors ${
-                      isSelected ? 'text-white font-medium' : 'text-neutral-300'
-                    }`}>
+                    <span className={`font-mono text-xs uppercase tracking-[0.05em] transition-colors ${isSelected ? 'text-white font-medium' : 'text-neutral-300'
+                      }`}>
                       {opt.toUpperCase()}
                     </span>
-                    <div className={`w-5 h-5 border flex items-center justify-center transition-colors ${
-                      isSelected 
-                        ? 'border-[#194896] bg-[#194896]/10' 
-                        : 'border-neutral-800 group-hover:border-neutral-600'
-                    }`}>
+                    <div className={`w-5 h-5 border flex items-center justify-center transition-colors ${isSelected
+                      ? 'border-[#194896] bg-[#194896]/10'
+                      : 'border-neutral-800 group-hover:border-neutral-600'
+                      }`}>
                       {isSelected && (
                         <div className="w-2 h-2 bg-[#194896]" />
                       )}
@@ -179,7 +196,7 @@ export default function Contact() {
     source: '',
     message: ''
   });
-  
+
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
@@ -238,9 +255,9 @@ export default function Contact() {
   };
 
   return (
-    <main className="pt-32 pb-24 px-6 md:px-12 bg-[#050505] text-white min-h-screen selection:bg-neutral-800 selection:text-white">
+    <main className="pt-32 pb-24 px-6 md:px-12 bg-[#050505] text-white min-h-screen">
       <div className="w-full">
-        
+
         {/* Header Section */}
         <div className="mb-16 md:mb-24 border-b border-neutral-900/60 pb-10">
           <div className="flex items-center gap-2 mb-4">
@@ -248,20 +265,20 @@ export default function Contact() {
             <span className="h-px w-6 bg-neutral-800"></span>
           </div>
           <h1 className="font-display text-[9vw] md:text-[5.5vw] leading-[1.05] font-extrabold tracking-tighter uppercase">
-            LET'S WORK <span className="text-neutral-600 block sm:inline">TOGETHER.</span>
+            LET'S WORK <span className="bg-gradient-to-r from-[#184795] to-[#3673d9] bg-clip-text text-transparent block sm:inline">TOGETHER.</span>
           </h1>
         </div>
 
         {/* Full Width Layout Stack */}
         <div className="space-y-24 md:space-y-32">
-          
+
           {/* Interactive Premium Form (Full Width Column) */}
           <div className="relative overflow-hidden w-full">
             <div className="absolute top-0 right-0 w-72 h-72 bg-white/[0.01] rounded-full blur-[100px] pointer-events-none"></div>
-            
+
             <AnimatePresence mode="wait">
               {formStatus === 'success' ? (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
@@ -274,7 +291,7 @@ export default function Contact() {
                   <p className="text-neutral-400 text-xs md:text-sm max-w-sm mb-8 leading-relaxed font-sans">
                     Thank you. Your project brief has been logged successfully. I will review your deliverables and reach back via email within 24 to 48 hours.
                   </p>
-                  <button 
+                  <button
                     onClick={() => setFormStatus('idle')}
                     className="font-mono text-xs uppercase tracking-widest px-6 py-2.5 border border-neutral-800 hover:border-white transition-colors rounded-none"
                   >
@@ -282,7 +299,7 @@ export default function Contact() {
                   </button>
                 </motion.div>
               ) : (
-                <motion.form 
+                <motion.form
                   onSubmit={handleSubmit}
                   className="space-y-10"
                   layout
@@ -290,17 +307,17 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     {/* Your Name */}
                     <div className="flex flex-col">
-                      <label 
-                        htmlFor="form-name" 
+                      <label
+                        htmlFor="form-name"
                         className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-200 block mb-3.5"
                       >
                         YOUR NAME *
                       </label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         required
                         value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full bg-[#111111] border border-neutral-900/80 rounded-none h-16 px-5 outline-none focus:border-neutral-700 transition-all font-sans text-sm text-white"
                         placeholder=""
                         id="form-name"
@@ -309,17 +326,17 @@ export default function Contact() {
 
                     {/* Email Address */}
                     <div className="flex flex-col">
-                      <label 
-                        htmlFor="form-email" 
+                      <label
+                        htmlFor="form-email"
                         className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-200 block mb-3.5"
                       >
                         EMAIL ADDRESS *
                       </label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full bg-[#111111] border border-neutral-900/80 rounded-none h-16 px-5 outline-none focus:border-neutral-700 transition-all font-sans text-sm text-white"
                         placeholder=""
                         id="form-email"
@@ -328,16 +345,16 @@ export default function Contact() {
 
                     {/* Company Name */}
                     <div className="flex flex-col">
-                      <label 
-                        htmlFor="form-company" 
+                      <label
+                        htmlFor="form-company"
                         className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-200 block mb-3.5"
                       >
                         COMPANY NAME
                       </label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         value={formData.companyName}
-                        onChange={(e) => setFormData({...formData, companyName: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                         className="w-full bg-[#111111] border border-neutral-900/80 rounded-none h-16 px-5 outline-none focus:border-neutral-700 transition-all font-sans text-sm text-white"
                         placeholder=""
                         id="form-company"
@@ -346,16 +363,16 @@ export default function Contact() {
 
                     {/* Company Website */}
                     <div className="flex flex-col">
-                      <label 
-                        htmlFor="form-website" 
+                      <label
+                        htmlFor="form-website"
                         className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-200 block mb-3.5"
                       >
                         COMPANY WEBSITE
                       </label>
-                      <input 
-                        type="url" 
+                      <input
+                        type="url"
                         value={formData.companyWebsite}
-                        onChange={(e) => setFormData({...formData, companyWebsite: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })}
                         className="w-full bg-[#111111] border border-neutral-900/80 rounded-none h-16 px-5 outline-none focus:border-neutral-700 transition-all font-sans text-sm text-white"
                         placeholder=""
                         id="form-website"
@@ -368,7 +385,7 @@ export default function Contact() {
                       label="WHEN DO YOU NEED YOUR NEW BRAND TO COME TO LIFE? *"
                       value={formData.timeline}
                       options={TIMELINE_OPTIONS}
-                      onChange={(val) => setFormData({...formData, timeline: val})}
+                      onChange={(val) => setFormData({ ...formData, timeline: val })}
                       required
                     />
 
@@ -378,7 +395,7 @@ export default function Contact() {
                       label="WHAT SERVICES ARE YOU LOOKING FOR? *"
                       value={formData.service}
                       options={SERVICE_OPTIONS}
-                      onChange={(val) => setFormData({...formData, service: val})}
+                      onChange={(val) => setFormData({ ...formData, service: val })}
                       required
                     />
 
@@ -388,7 +405,7 @@ export default function Contact() {
                       label="WHAT'S YOUR BUDGET? *"
                       value={formData.budget}
                       options={BUDGET_OPTIONS}
-                      onChange={(val) => setFormData({...formData, budget: val})}
+                      onChange={(val) => setFormData({ ...formData, budget: val })}
                       required
                     />
 
@@ -398,25 +415,25 @@ export default function Contact() {
                       label="HOW DID YOU HEAR ABOUT US? *"
                       value={formData.source}
                       options={SOURCE_OPTIONS}
-                      onChange={(val) => setFormData({...formData, source: val})}
+                      onChange={(val) => setFormData({ ...formData, source: val })}
                       required
                     />
                   </div>
 
                   {/* Message / Brief Box */}
                   <div className="flex flex-col">
-                    <label 
-                      htmlFor="form-message" 
+                    <label
+                      htmlFor="form-message"
                       className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-200 block mb-3.5"
                     >
                       TELL US ABOUT THE PROJECT (SCOPE, TIMELINE, BUDGET) *
                     </label>
-                    <textarea 
+                    <textarea
                       id="form-message"
                       required
                       rows={6}
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder=""
                       className="w-full bg-[#111111] border border-neutral-900/80 rounded-none p-5 h-56 outline-none focus:border-neutral-700 transition-all font-sans text-sm text-white resize-none leading-relaxed"
                     ></textarea>
@@ -431,7 +448,7 @@ export default function Contact() {
                   )}
 
                   {/* Submit Button */}
-                  <button 
+                  <button
                     type="submit"
                     disabled={formStatus === 'submitting'}
                     className="w-full py-4 px-6 font-mono text-xs uppercase tracking-[0.25em] bg-white text-black hover:bg-neutral-200 disabled:bg-neutral-800 disabled:text-neutral-500 transition-all font-bold rounded-none flex items-center justify-center gap-2.5 group cursor-pointer"
@@ -455,7 +472,7 @@ export default function Contact() {
 
           {/* Details & FAQs Stacked Section (Studio content first, FAQ below) */}
           <div className="space-y-24 border-t border-neutral-900/60 pt-20">
-            
+
             {/* Studio Content Section: Elegant Minimalist Statement */}
             <div className="space-y-12">
               <div className="max-w-4xl space-y-6">
@@ -494,25 +511,25 @@ export default function Contact() {
                 <span className="font-mono text-xs text-neutral-500 tracking-[0.2em] uppercase block mb-2">FAQ</span>
                 <h3 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight">Got Questions?</h3>
               </div>
-              
+
               <div className="border-t border-neutral-900 divide-y divide-neutral-900">
                 {faqs.map((faq, index) => {
                   const isOpen = expandedFaq === index;
                   return (
-                    <div 
+                    <div
                       key={index}
                       className="overflow-hidden"
                     >
                       <button
                         onClick={() => toggleFaq(index)}
-                        className="w-full py-7 text-left flex justify-between items-center gap-6 hover:opacity-85 transition-opacity group"
+                        className="w-full py-7 text-left flex justify-between items-center gap-6 hover:opacity-85 transition-opacity group cursor-pointer"
                       >
                         <span className="font-sans text-lg sm:text-xl md:text-2xl font-medium text-neutral-300 group-hover:text-white transition-colors leading-snug tracking-tight">
                           {faq.question}
                         </span>
                         <ChevronDown className={`w-5 h-5 text-neutral-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-white' : ''}`} />
                       </button>
-                      
+
                       <AnimatePresence initial={false}>
                         {isOpen && (
                           <motion.div

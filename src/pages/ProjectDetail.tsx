@@ -355,7 +355,7 @@ export default function ProjectDetail() {
   };
 
   return (
-    <div className="bg-black text-white selection:bg-white selection:text-black pt-28 md:pt-36 overflow-hidden">
+    <div className="bg-black text-white pt-28 md:pt-36 overflow-hidden">
 
       {/* Back button */}
       <div className="px-6 md:px-12 mb-10">
