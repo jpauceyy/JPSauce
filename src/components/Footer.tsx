@@ -69,12 +69,6 @@ export default function Footer() {
               >
                 jspaul2000@proton.me
               </a>
-              <a
-                href="tel:+447958123456"
-                className="block text-3xl sm:text-4xl md:text-5xl font-display font-medium tracking-tight hover:text-neutral-400 transition-colors duration-300"
-              >
-                +44 7958 123456
-              </a>
               <span className="block text-[10px] font-mono tracking-[0.25em] text-neutral-600 uppercase mt-1">
                 London, United Kingdom (Remote)
               </span>
