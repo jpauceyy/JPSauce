@@ -24,7 +24,11 @@
 }
 
 @utility link-underlined {
-  @apply font-mono text-xs md:text-sm uppercase tracking-widest pb-1 border-b border-white hover:text-neutral-400 hover:border-neutral-400 transition-colors inline-block;
+  @apply font-mono text-xs md:text-sm uppercase tracking-widest pb-1 border-b border-white transition-colors inline-block;
+  &:hover {
+    color: #194896;
+    border-color: #194896;
+  }
 }
 
 @utility gallery-grid-item {

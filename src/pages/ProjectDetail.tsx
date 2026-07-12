@@ -380,7 +380,7 @@ export default function ProjectDetail() {
             variants={fadeUp}
             className="font-mono text-xs md:text-sm tracking-[0.3em] text-neutral-400 mb-4 block uppercase font-medium"
           >
-            CASE STUDY — {project.numId} / 05
+            CASE STUDY — {project.numId} / {String(Object.keys(projectsDatabase).length).padStart(2, '0')}
           </motion.span>
 
           <motion.h1
@@ -786,7 +786,7 @@ export default function ProjectDetail() {
           {/* Huge interactive Card for the Next Project */}
           <Link
             to={`/work/${nextProject.id}`}
-            className="group block relative w-full aspect-video md:aspect-[21/9] bg-neutral-950 overflow-hidden border border-neutral-900 rounded-sm"
+            className="group block relative w-full aspect-[4/3] md:aspect-[21/9] bg-neutral-950 overflow-hidden border border-neutral-900 rounded-sm"
           >
             {/* Background Image/Video of Next Project */}
             {nextProject.heroImage.endsWith('.mp4') ? (

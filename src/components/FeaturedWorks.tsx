@@ -89,7 +89,7 @@ export default function FeaturedWorks() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-white">
             Selected<br />projects
           </h2>
-          <a href="#" className="link-underlined self-start md:self-auto mb-2 md:mb-4">
+          <a href="/work" className="link-underlined self-start md:self-auto mb-2 md:mb-4">
             View all works
           </a>
         </div>
