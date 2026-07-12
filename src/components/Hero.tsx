@@ -50,10 +50,12 @@ export default function Hero() {
           <motion.video 
             style={{ scale: imageScale }}
             src="/videopromo.mp4" 
+            poster="/videopromo-poster.webp"
             autoPlay 
             loop 
             muted 
             playsInline
+            preload="auto"
             className="w-full h-full object-cover opacity-80 md:opacity-90 hover:opacity-100 transition-opacity duration-500 origin-center" 
           />
         </motion.div>
