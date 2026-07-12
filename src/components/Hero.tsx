@@ -56,6 +56,7 @@ export default function Hero() {
             muted 
             playsInline
             preload="auto"
+            fetchPriority="high"
             className="w-full h-full object-cover opacity-80 md:opacity-90 hover:opacity-100 transition-opacity duration-500 origin-center" 
           />
         </motion.div>
