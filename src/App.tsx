@@ -79,6 +79,8 @@ function ConditionalFooter() {
   return <Footer />;
 }
 
+import CookieConsent from './components/CookieConsent';
+
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -102,6 +104,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ConditionalFooter />
+        <CookieConsent />
       </div>
     </Router>
   );
