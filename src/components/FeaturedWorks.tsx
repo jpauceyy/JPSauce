@@ -28,7 +28,7 @@ const projects = [
     tags: ['BRANDING', 'GRAPHIC DESIGN'],
     title: 'AVNG',
     desc: 'Deploying a high-energy, glitch-heavy aesthetic across customized promotional campaign materials and team branding.',
-    image: '/avng-victory.webp',
+    image: '/avng-banner.webp',
   },
   {
     id: 'oblivion',
