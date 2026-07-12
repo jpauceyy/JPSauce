@@ -45,7 +45,7 @@ export default function CookieConsent() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-neutral-400 hover:text-white transition-colors p-1"
+                className="text-neutral-400 hover:text-white transition-colors p-1 cursor-pointer"
                 aria-label="Close settings"
               >
                 <X className="w-4 h-4" />
@@ -61,13 +61,13 @@ export default function CookieConsent() {
             <div className="flex items-center justify-end gap-3 mt-2">
               <button
                 onClick={handleDecline}
-                className="font-mono text-xs uppercase tracking-widest px-4 py-2 hover:text-[#194896] transition-colors"
+                className="font-mono text-xs uppercase tracking-widest px-4 py-2 hover:text-[#194896] transition-colors cursor-pointer"
               >
                 Decline
               </button>
               <button
                 onClick={handleAccept}
-                className="font-mono text-xs uppercase tracking-widest px-5 py-2.5 bg-white text-black font-semibold hover:bg-[#194896] hover:text-white transition-colors"
+                className="font-mono text-xs uppercase tracking-widest px-5 py-2.5 bg-white text-black font-semibold hover:bg-[#194896] hover:text-white transition-colors cursor-pointer"
               >
                 Accept All
               </button>
