@@ -28,7 +28,7 @@ const projects = [
     tags: ['BRANDING', 'GRAPHIC DESIGN'],
     title: 'AVNG',
     desc: 'Deploying a high-energy, glitch-heavy aesthetic across customized promotional campaign materials and team branding.',
-    image: '/avng.gif',
+    image: '/avng-victory.webp',
   },
   {
     id: 'oblivion',
@@ -140,9 +140,10 @@ export default function FeaturedWorks() {
                 >
                   {/* Base image */}
                   <img
-                    src={project.image}
+                    src={project.image.replace('.webp', '.webp')} // Ensures WebP
                     alt={project.title}
-                    loading="lazy"
+                    loading={i === 0 ? "eager" : "lazy"}
+                    fetchPriority={i === 0 ? "high" : "auto"}
                     decoding="async"
                     className={`absolute inset-0 w-full h-full object-cover transition-all [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] delay-[80ms] ${
                       project.hoverVideo

@@ -120,7 +120,7 @@ export default function Footer() {
       {/* BOTTOM SECTION (GIANT EMBOSSED METALLIC BANNER) */}
       <div className="relative w-full h-[300px] md:h-[45vh] overflow-hidden border-t border-neutral-900/60">
         {/* Floating Copyright info overlay on top-left of the banner */}
-        <div className="absolute top-8 left-6 md:top-12 md:left-12 z-20 font-mono text-[10px] tracking-[0.25em] leading-relaxed text-neutral-500 select-none bg-neutral-900/40 backdrop-blur-xl border border-white/10 shadow-2xl py-2 px-5">
+        <div className="absolute top-8 right-6 left-6 md:top-12 md:right-auto md:left-12 z-20 font-mono text-[10px] tracking-[0.25em] leading-relaxed text-neutral-500 select-none bg-neutral-900/40 backdrop-blur-xl border border-white/10 shadow-2xl py-2 px-5">
           <span className="block font-medium text-white">JPSauce Creative Co., Ltd.</span>
           <span className="text-white">© 2026 JPSAUCE STUDIO. ALL RIGHTS RESERVED.</span>
         </div>
